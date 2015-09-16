@@ -1,0 +1,7 @@
+<map id="ElectronsProducer" name="ElectronsProducer">
+<area shape="rect" id="node2" href="$classLeptonsProducer.html" title="LeptonsProducer\&lt; pat\l::Electron \&gt;" alt="" coords="5,169,156,211"/>
+<area shape="rect" id="node3" href="$classCandidatesProducer.html" title="CandidatesProducer\l\&lt; pat::Electron \&gt;" alt="" coords="11,80,151,121"/>
+<area shape="rect" id="node4" href="$classFramework_1_1Producer.html" title="Base class for Framework producers. " alt="" coords="7,5,154,32"/>
+<area shape="rect" id="node5" href="$classIdentifiable.html" title="Identifiable" alt="" coords="181,177,266,203"/>
+<area shape="rect" id="node6" href="$classScaleFactors.html" title="ScaleFactors" alt="" coords="290,177,389,203"/>
+</map>
