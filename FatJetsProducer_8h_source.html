@@ -122,67 +122,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                            &amp;<a class="code" href="classCandidatesProducer.html">CandidatesProducer&lt;pat::Jet&gt;::tree</a>[<span class="stringliteral">&quot;toptag_&quot;</span> + btag].write&lt;std::vector&lt;std::vector&lt;float&gt;&gt;&gt;());</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classFatJetsProducer.html">FatJetsProducer</a>() {}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classFatJetsProducer.html#a3aa0dca8fe01bd1e1afb1a764b857313">   40</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFatJetsProducer.html#a3aa0dca8fe01bd1e1afb1a764b857313">doConsumes</a>(<span class="keyword">const</span> edm::ParameterSet&amp; config, edm::ConsumesCollector&amp;&amp; collector)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            m_jets_token = collector.consumes&lt;std::vector&lt;pat::Jet&gt;&gt;(config.getUntrackedParameter&lt;edm::InputTag&gt;(<span class="stringliteral">&quot;jets&quot;</span>, edm::InputTag(<span class="stringliteral">&quot;slimmedJetsAK8&quot;</span>)));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFatJetsProducer.html#af547ec3cd7eae48981f158ce2676c92e">produce</a>(edm::Event&amp; event, <span class="keyword">const</span> edm::EventSetup&amp; eventSetup) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">float</span> getBTagDiscriminant(<span class="keywordtype">size_t</span> index, <span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> m_btag_discriminators.at(name)-&gt;at(index);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Tokens</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        edm::EDGetTokenT&lt;std::vector&lt;pat::Jet&gt;&gt; m_jets_token;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            Njettinesstau1 = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;Njettinesstau1&quot;</span>,<span class="stringliteral">&quot;NjettinessAK8:tau1&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            Njettinesstau2 = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;Njettinesstau2&quot;</span>,<span class="stringliteral">&quot;NjettinessAK8:tau2&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            Njettinesstau3 = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;Njettinesstau3&quot;</span>,<span class="stringliteral">&quot;NjettinessAK8:tau3&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            SoftDropSubjets = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;SoftDropSubjets&quot;</span>,<span class="stringliteral">&quot;SoftDrop&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            TopTagSubjets = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;TopTagSubjets&quot;</span>,<span class="stringliteral">&quot;CMSTopTag&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classFatJetsProducer.html">FatJetsProducer</a>() {}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classFatJetsProducer.html#a3aa0dca8fe01bd1e1afb1a764b857313">   45</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFatJetsProducer.html#a3aa0dca8fe01bd1e1afb1a764b857313">doConsumes</a>(<span class="keyword">const</span> edm::ParameterSet&amp; config, edm::ConsumesCollector&amp;&amp; collector)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            m_jets_token = collector.consumes&lt;std::vector&lt;pat::Jet&gt;&gt;(config.getUntrackedParameter&lt;edm::InputTag&gt;(<span class="stringliteral">&quot;jets&quot;</span>, edm::InputTag(<span class="stringliteral">&quot;slimmedJetsAK8&quot;</span>)));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classFatJetsProducer.html#af547ec3cd7eae48981f158ce2676c92e">produce</a>(edm::Event&amp; event, <span class="keyword">const</span> edm::EventSetup&amp; eventSetup) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">float</span> getBTagDiscriminant(<span class="keywordtype">size_t</span> index, <span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> m_btag_discriminators.at(name)-&gt;at(index);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::map&lt;std::string, std::vector&lt;float&gt;*&gt; m_btag_discriminators;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::vector&lt;std::string&gt; m_subjets_btag_discriminators;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::map&lt;std::string, std::vector&lt;std::vector&lt;float&gt;&gt;*&gt; m_softdrop_btag_discriminators_branches;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::map&lt;std::string, std::vector&lt;std::vector&lt;float&gt;&gt;*&gt; m_toptag_btag_discriminators_branches;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// Tree members</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::vector&lt;float&gt;&amp; area = tree[<span class="stringliteral">&quot;area&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::vector&lt;int8_t&gt;&amp; partonFlavor = tree[<span class="stringliteral">&quot;partonFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::vector&lt;int8_t&gt;&amp; hadronFlavor = tree[<span class="stringliteral">&quot;hadronFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::vector&lt;float&gt;&amp; jecFactor = tree[<span class="stringliteral">&quot;jecFactor&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        BRANCH(tau1, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        BRANCH(tau2, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        BRANCH(tau3, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        BRANCH(softdrop_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        BRANCH(trimmed_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        BRANCH(pruned_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        BRANCH(filtered_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        BRANCH(has_toptag_info, std::vector&lt;bool&gt;);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        BRANCH(toptag_min_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        BRANCH(toptag_top_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        BRANCH(toptag_w_mass, std::vector&lt;float&gt;);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        BRANCH(toptag_n_subjets, std::vector&lt;uint8_t&gt;);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        BRANCH(toptag_subjets_p4, std::vector&lt;std::vector&lt;LorentzVector&gt;&gt;);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        BRANCH(softdrop_subjets_p4, std::vector&lt;std::vector&lt;LorentzVector&gt;&gt;);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">float</span> getSoftDropBTagDiscriminant(<span class="keywordtype">size_t</span> index, <span class="keywordtype">size_t</span> sj_index, <span class="keyword">const</span> std::string&amp; btag_name)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> m_softdrop_btag_discriminators_branches.at(btag_name)-&gt;at(index).at(sj_index);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">float</span> getTopTagBTagDiscriminant(<span class="keywordtype">size_t</span> index, <span class="keywordtype">size_t</span> sj_index, <span class="keyword">const</span> std::string&amp; btag_name)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> m_toptag_btag_discriminators_branches.at(btag_name)-&gt;at(index).at(sj_index);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// Tokens</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        edm::EDGetTokenT&lt;std::vector&lt;pat::Jet&gt;&gt; m_jets_token;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::map&lt;std::string, std::vector&lt;float&gt;*&gt; m_btag_discriminators;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::vector&lt;std::string&gt; m_subjets_btag_discriminators;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::map&lt;std::string, std::vector&lt;std::vector&lt;float&gt;&gt;*&gt; m_softdrop_btag_discriminators_branches;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        std::map&lt;std::string, std::vector&lt;std::vector&lt;float&gt;&gt;*&gt; m_toptag_btag_discriminators_branches;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        std::string Njettinesstau1;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::string Njettinesstau2;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::string Njettinesstau3;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::string SoftDropSubjets;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::string TopTagSubjets;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// Tree members</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        std::vector&lt;float&gt;&amp; area = tree[<span class="stringliteral">&quot;area&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::vector&lt;int8_t&gt;&amp; partonFlavor = tree[<span class="stringliteral">&quot;partonFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::vector&lt;int8_t&gt;&amp; hadronFlavor = tree[<span class="stringliteral">&quot;hadronFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::vector&lt;float&gt;&amp; jecFactor = tree[<span class="stringliteral">&quot;jecFactor&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        BRANCH(passLooseID, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        BRANCH(passTightID, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        BRANCH(passTightLeptonVetoID, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        BRANCH(tau1, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        BRANCH(tau2, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        BRANCH(tau3, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        BRANCH(softdrop_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        BRANCH(trimmed_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        BRANCH(pruned_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        BRANCH(filtered_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        BRANCH(has_toptag_info, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        BRANCH(toptag_min_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        BRANCH(toptag_top_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        BRANCH(toptag_w_mass, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        BRANCH(toptag_n_subjets, std::vector&lt;uint8_t&gt;);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        BRANCH(toptag_subjets_p4, std::vector&lt;std::vector&lt;LorentzVector&gt;&gt;);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        BRANCH(softdrop_subjets_p4, std::vector&lt;std::vector&lt;LorentzVector&gt;&gt;);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classBTaggingScaleFactors_html"><div class="ttname"><a href="classBTaggingScaleFactors.html">BTaggingScaleFactors</a></div><div class="ttdef"><b>Definition:</b> BTaggingScaleFactors.h:33</div></div>
 <div class="ttc" id="classCandidatesProducer_html"><div class="ttname"><a href="classCandidatesProducer.html">CandidatesProducer</a></div><div class="ttdef"><b>Definition:</b> CandidatesProducer.h:9</div></div>
 <div class="ttc" id="classFatJetsProducer_html"><div class="ttname"><a href="classFatJetsProducer.html">FatJetsProducer</a></div><div class="ttdef"><b>Definition:</b> FatJetsProducer.h:9</div></div>
-<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:125</div></div>
-<div class="ttc" id="classFatJetsProducer_html_a3aa0dca8fe01bd1e1afb1a764b857313"><div class="ttname"><a href="classFatJetsProducer.html#a3aa0dca8fe01bd1e1afb1a764b857313">FatJetsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> FatJetsProducer.h:40</div></div>
+<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:130</div></div>
+<div class="ttc" id="classFatJetsProducer_html_a3aa0dca8fe01bd1e1afb1a764b857313"><div class="ttname"><a href="classFatJetsProducer.html#a3aa0dca8fe01bd1e1afb1a764b857313">FatJetsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> FatJetsProducer.h:45</div></div>
 <div class="ttc" id="classFatJetsProducer_html_af547ec3cd7eae48981f158ce2676c92e"><div class="ttname"><a href="classFatJetsProducer.html#af547ec3cd7eae48981f158ce2676c92e">FatJetsProducer::produce</a></div><div class="ttdeci">virtual void produce(edm::Event &amp;event, const edm::EventSetup &amp;eventSetup) override</div><div class="ttdoc">Main method of the producer, called for each event. </div><div class="ttdef"><b>Definition:</b> FatJetsProducer.cc:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

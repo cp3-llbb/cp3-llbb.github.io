@@ -138,26 +138,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34da1c336b60ce8a35e1d05122abdce3 inherit pub_methods_classFramework_1_1Producer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFramework_1_1Producer.html#a34da1c336b60ce8a35e1d05122abdce3">endLuminosityBlock</a> (const edm::LuminosityBlock &amp;lumi, const edm::EventSetup &amp;setup)</td></tr>
 <tr class="memdesc:a34da1c336b60ce8a35e1d05122abdce3 inherit pub_methods_classFramework_1_1Producer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of a luminosity section.  <a href="#a34da1c336b60ce8a35e1d05122abdce3">More...</a><br /></td></tr>
 <tr class="separator:a34da1c336b60ce8a35e1d05122abdce3 inherit pub_methods_classFramework_1_1Producer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af59369e618ff15aeba223f790469f4 inherit pub_methods_classFramework_1_1Producer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8af59369e618ff15aeba223f790469f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Producer</b> (const <a class="el" href="classFramework_1_1Producer.html">Producer</a> &amp;)=delete</td></tr>
+<tr class="separator:a8af59369e618ff15aeba223f790469f4 inherit pub_methods_classFramework_1_1Producer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77fbc0b80d4d677b4c669c47045e6bb inherit pub_methods_classFramework_1_1Producer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af77fbc0b80d4d677b4c669c47045e6bb"></a>
+<a class="el" href="classFramework_1_1Producer.html">Producer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classFramework_1_1Producer.html">Producer</a> &amp;)=delete</td></tr>
+<tr class="separator:af77fbc0b80d4d677b4c669c47045e6bb inherit pub_methods_classFramework_1_1Producer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a96658a79edb386b7689b4974e788b72f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96658a79edb386b7689b4974e788b72f"></a>
-std::vector&lt; LorentzVector &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_p4</b> = tree_packed[&quot;p4&quot;].write&lt;std::vector&lt;LorentzVector&gt;&gt;()</td></tr>
+std::vector&lt; LorentzVector &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_p4</b> = tree_packed[&quot;p4&quot;].transient_write&lt;std::vector&lt;LorentzVector&gt;&gt;()</td></tr>
 <tr class="separator:a96658a79edb386b7689b4974e788b72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00a071a7aa8d7605314e43667c2d5419"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00a071a7aa8d7605314e43667c2d5419"></a>
-std::vector&lt; float &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_y</b> = tree_packed[&quot;y&quot;].write&lt;std::vector&lt;float&gt;&gt;()</td></tr>
+std::vector&lt; float &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_y</b> = tree_packed[&quot;y&quot;].transient_write&lt;std::vector&lt;float&gt;&gt;()</td></tr>
 <tr class="separator:a00a071a7aa8d7605314e43667c2d5419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa322fe46c3e16b0231a79ac7bc1f0a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa322fe46c3e16b0231a79ac7bc1f0a5f"></a>
-std::vector&lt; int16_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_pdg_id</b> = tree_packed[&quot;pdg_id&quot;].write&lt;std::vector&lt;int16_t&gt;&gt;()</td></tr>
+std::vector&lt; int16_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_pdg_id</b> = tree_packed[&quot;pdg_id&quot;].transient_write&lt;std::vector&lt;int16_t&gt;&gt;()</td></tr>
 <tr class="separator:aa322fe46c3e16b0231a79ac7bc1f0a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15f94a95bf06f48f30286bf4f0f5edba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15f94a95bf06f48f30286bf4f0f5edba"></a>
-std::vector&lt; int8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_status</b> = tree_packed[&quot;status&quot;].write&lt;std::vector&lt;int8_t&gt;&gt;()</td></tr>
+std::vector&lt; int8_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_status</b> = tree_packed[&quot;status&quot;].transient_write&lt;std::vector&lt;int8_t&gt;&gt;()</td></tr>
 <tr class="separator:a15f94a95bf06f48f30286bf4f0f5edba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad65175f69918002c0b1b9f26d350ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ad65175f69918002c0b1b9f26d350ee"></a>
-std::vector&lt; int16_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_status_flags</b> = tree_packed[&quot;status_flags&quot;].write&lt;std::vector&lt;int16_t&gt;&gt;()</td></tr>
+std::vector&lt; int16_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_status_flags</b> = tree_packed[&quot;status_flags&quot;].transient_write&lt;std::vector&lt;int16_t&gt;&gt;()</td></tr>
 <tr class="separator:a3ad65175f69918002c0b1b9f26d350ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c05237d9afb1c6f5fac7e393820ebaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c05237d9afb1c6f5fac7e393820ebaf"></a>
-std::vector&lt; std::vector&lt; uint16_t &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_mothers_index</b> = tree_packed[&quot;mothers_index&quot;].write&lt;std::vector&lt;std::vector&lt;uint16_t&gt;&gt;&gt;()</td></tr>
+std::vector&lt; std::vector&lt; uint16_t &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>packed_mothers_index</b> = tree_packed[&quot;mothers_index&quot;].transient_write&lt;std::vector&lt;std::vector&lt;uint16_t&gt;&gt;&gt;()</td></tr>
 <tr class="separator:a3c05237d9afb1c6f5fac7e393820ebaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4426e58fa4fd27818cef6f643ad8192"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4426e58fa4fd27818cef6f643ad8192"></a>
 std::vector&lt; LorentzVector &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>pruned_p4</b> = tree_pruned[&quot;p4&quot;].write&lt;std::vector&lt;LorentzVector&gt;&gt;()</td></tr>
@@ -292,7 +298,7 @@ CMSSW reference manual: <a href="https://cmssdt.cern.ch/SDT/doxygen/">https://cm
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

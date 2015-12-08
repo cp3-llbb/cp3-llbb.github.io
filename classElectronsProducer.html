@@ -115,6 +115,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e6489540c749b2174e81861a725406e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElectronsProducer.html#a4e6489540c749b2174e81861a725406e">produce</a> (edm::Event &amp;event, const edm::EventSetup &amp;eventSetup) override</td></tr>
 <tr class="memdesc:a4e6489540c749b2174e81861a725406e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main method of the producer, called for each event.  <a href="#a4e6489540c749b2174e81861a725406e">More...</a><br /></td></tr>
 <tr class="separator:a4e6489540c749b2174e81861a725406e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800506b46e3d4c651bf85c970ab25478"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a800506b46e3d4c651bf85c970ab25478"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BRANCH</b> (isEB, std::vector&lt; bool &gt;)</td></tr>
+<tr class="separator:a800506b46e3d4c651bf85c970ab25478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403f3c2478331954d30dc44ffc1d9606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a403f3c2478331954d30dc44ffc1d9606"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BRANCH</b> (isEE, std::vector&lt; bool &gt;)</td></tr>
+<tr class="separator:a403f3c2478331954d30dc44ffc1d9606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785ff2b33bd9b0587cc703826d20f547"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a785ff2b33bd9b0587cc703826d20f547"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BRANCH</b> (dxy, std::vector&lt; float &gt;)</td></tr>
+<tr class="separator:a785ff2b33bd9b0587cc703826d20f547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a3e5fd91cd56783dcdb9171abcee3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87a3e5fd91cd56783dcdb9171abcee3a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BRANCH</b> (dz, std::vector&lt; float &gt;)</td></tr>
+<tr class="separator:a87a3e5fd91cd56783dcdb9171abcee3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLeptonsProducer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLeptonsProducer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLeptonsProducer.html">LeptonsProducer&lt; pat::Electron &gt;</a></td></tr>
 <tr class="memitem:a9ffd0366103cfc87570de9741835e17f inherit pub_methods_classLeptonsProducer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ffd0366103cfc87570de9741835e17f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LeptonsProducer</b> (const std::string &amp;name, const ROOT::TreeGroup &amp;<a class="el" href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">tree</a>, const edm::ParameterSet &amp;config)</td></tr>
@@ -145,6 +157,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34da1c336b60ce8a35e1d05122abdce3 inherit pub_methods_classFramework_1_1Producer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFramework_1_1Producer.html#a34da1c336b60ce8a35e1d05122abdce3">endLuminosityBlock</a> (const edm::LuminosityBlock &amp;lumi, const edm::EventSetup &amp;setup)</td></tr>
 <tr class="memdesc:a34da1c336b60ce8a35e1d05122abdce3 inherit pub_methods_classFramework_1_1Producer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of a luminosity section.  <a href="#a34da1c336b60ce8a35e1d05122abdce3">More...</a><br /></td></tr>
 <tr class="separator:a34da1c336b60ce8a35e1d05122abdce3 inherit pub_methods_classFramework_1_1Producer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af59369e618ff15aeba223f790469f4 inherit pub_methods_classFramework_1_1Producer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8af59369e618ff15aeba223f790469f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Producer</b> (const <a class="el" href="classFramework_1_1Producer.html">Producer</a> &amp;)=delete</td></tr>
+<tr class="separator:a8af59369e618ff15aeba223f790469f4 inherit pub_methods_classFramework_1_1Producer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77fbc0b80d4d677b4c669c47045e6bb inherit pub_methods_classFramework_1_1Producer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af77fbc0b80d4d677b4c669c47045e6bb"></a>
+<a class="el" href="classFramework_1_1Producer.html">Producer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classFramework_1_1Producer.html">Producer</a> &amp;)=delete</td></tr>
+<tr class="separator:af77fbc0b80d4d677b4c669c47045e6bb inherit pub_methods_classFramework_1_1Producer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIdentifiable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIdentifiable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIdentifiable.html">Identifiable</a></td></tr>
 <tr class="memitem:ac13579a4b53e9f2d9ea1bebd86f45675 inherit pub_methods_classIdentifiable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac13579a4b53e9f2d9ea1bebd86f45675"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Identifiable</b> (ROOT::TreeGroup &amp;tree)</td></tr>
@@ -396,7 +414,7 @@ CMSSW reference manual: <a href="https://cmssdt.cern.ch/SDT/doxygen/">https://cm
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

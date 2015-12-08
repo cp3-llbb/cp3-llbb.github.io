@@ -127,20 +127,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::vector&lt;bool&gt;&amp; isMedium = tree[<span class="stringliteral">&quot;isMedium&quot;</span>].write&lt;std::vector&lt;bool&gt;&gt;();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::vector&lt;bool&gt;&amp; isTight = tree[<span class="stringliteral">&quot;isTight&quot;</span>].write&lt;std::vector&lt;bool&gt;&gt;();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::vector&lt;bool&gt;&amp; isHighPt = tree[<span class="stringliteral">&quot;isHighPt&quot;</span>].write&lt;std::vector&lt;bool&gt;&gt;();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classMuonsProducer_html_a59189dcc78cf4563806047208dfd7bcb"><div class="ttname"><a href="classMuonsProducer.html#a59189dcc78cf4563806047208dfd7bcb">MuonsProducer::produce</a></div><div class="ttdeci">virtual void produce(edm::Event &amp;event, const edm::EventSetup &amp;eventSetup) override</div><div class="ttdoc">Main method of the producer, called for each event. </div><div class="ttdef"><b>Definition:</b> MuonsProducer.cc:3</div></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        BRANCH(dxy, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        BRANCH(dz, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classMuonsProducer_html_a59189dcc78cf4563806047208dfd7bcb"><div class="ttname"><a href="classMuonsProducer.html#a59189dcc78cf4563806047208dfd7bcb">MuonsProducer::produce</a></div><div class="ttdeci">virtual void produce(edm::Event &amp;event, const edm::EventSetup &amp;eventSetup) override</div><div class="ttdoc">Main method of the producer, called for each event. </div><div class="ttdef"><b>Definition:</b> MuonsProducer.cc:5</div></div>
 <div class="ttc" id="classLeptonsProducer_html"><div class="ttname"><a href="classLeptonsProducer.html">LeptonsProducer</a></div><div class="ttdef"><b>Definition:</b> LeptonsProducer.h:10</div></div>
 <div class="ttc" id="classMuonsProducer_html"><div class="ttname"><a href="classMuonsProducer.html">MuonsProducer</a></div><div class="ttdef"><b>Definition:</b> MuonsProducer.h:12</div></div>
 <div class="ttc" id="classScaleFactors_html"><div class="ttname"><a href="classScaleFactors.html">ScaleFactors</a></div><div class="ttdef"><b>Definition:</b> ScaleFactors.h:18</div></div>
 <div class="ttc" id="classLeptonsProducer_html_acc417ef0427a7cf96a71b8f818b954d8"><div class="ttname"><a href="classLeptonsProducer.html#acc417ef0427a7cf96a71b8f818b954d8">LeptonsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> LeptonsProducer.h:22</div></div>
-<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:125</div></div>
+<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:130</div></div>
 <div class="ttc" id="classMuonsProducer_html_ac3d524d478a1fdcd2dafe372a7991afe"><div class="ttname"><a href="classMuonsProducer.html#ac3d524d478a1fdcd2dafe372a7991afe">MuonsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> MuonsProducer.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

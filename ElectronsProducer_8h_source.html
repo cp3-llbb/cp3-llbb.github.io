@@ -109,19 +109,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classElectronsProducer.html#a930074d79fafa3db8447578fa16c99fd">   20</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classElectronsProducer.html#a930074d79fafa3db8447578fa16c99fd">doConsumes</a>(<span class="keyword">const</span> edm::ParameterSet&amp; config, edm::ConsumesCollector&amp;&amp; collector)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="classLeptonsProducer.html#acc417ef0427a7cf96a71b8f818b954d8">LeptonsProducer::doConsumes</a>(config, std::forward&lt;edm::ConsumesCollector&gt;(collector));</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            Identifiable::consumes_id_tokens(config, std::forward&lt;edm::ConsumesCollector&gt;(collector));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classElectronsProducer.html#a4e6489540c749b2174e81861a725406e">produce</a>(edm::Event&amp; event, <span class="keyword">const</span> edm::EventSetup&amp; eventSetup) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            m_vertices_token = collector.consumes&lt;std::vector&lt;reco::Vertex&gt;&gt;(config.getUntrackedParameter&lt;edm::InputTag&gt;(<span class="stringliteral">&quot;vertices&quot;</span>, edm::InputTag(<span class="stringliteral">&quot;offlineSlimmedPrimaryVertices&quot;</span>)));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classElectronsProducer.html#a4e6489540c749b2174e81861a725406e">produce</a>(edm::Event&amp; event, <span class="keyword">const</span> edm::EventSetup&amp; eventSetup) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// Tokens</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">// Tree members</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        edm::EDGetTokenT&lt;std::vector&lt;reco::Vertex&gt;&gt; m_vertices_token;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// Tree members</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        BRANCH(isEB, std::vector&lt;bool&gt;); </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        BRANCH(isEE, std::vector&lt;bool&gt;); </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        BRANCH(dxy, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        BRANCH(dz, std::vector&lt;float&gt;);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classLeptonsProducer_html"><div class="ttname"><a href="classLeptonsProducer.html">LeptonsProducer</a></div><div class="ttdef"><b>Definition:</b> LeptonsProducer.h:10</div></div>
 <div class="ttc" id="classElectronsProducer_html_a4e6489540c749b2174e81861a725406e"><div class="ttname"><a href="classElectronsProducer.html#a4e6489540c749b2174e81861a725406e">ElectronsProducer::produce</a></div><div class="ttdeci">virtual void produce(edm::Event &amp;event, const edm::EventSetup &amp;eventSetup) override</div><div class="ttdoc">Main method of the producer, called for each event. </div><div class="ttdef"><b>Definition:</b> ElectronsProducer.cc:3</div></div>
 <div class="ttc" id="classScaleFactors_html"><div class="ttname"><a href="classScaleFactors.html">ScaleFactors</a></div><div class="ttdef"><b>Definition:</b> ScaleFactors.h:18</div></div>
@@ -129,11 +135,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classElectronsProducer_html_a930074d79fafa3db8447578fa16c99fd"><div class="ttname"><a href="classElectronsProducer.html#a930074d79fafa3db8447578fa16c99fd">ElectronsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> ElectronsProducer.h:20</div></div>
 <div class="ttc" id="classIdentifiable_html"><div class="ttname"><a href="classIdentifiable.html">Identifiable</a></div><div class="ttdef"><b>Definition:</b> Identifiable.h:13</div></div>
 <div class="ttc" id="classElectronsProducer_html"><div class="ttname"><a href="classElectronsProducer.html">ElectronsProducer</a></div><div class="ttdef"><b>Definition:</b> ElectronsProducer.h:10</div></div>
-<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:125</div></div>
+<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:130</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -107,11 +107,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                m_muons_wp = string_to_wp(config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;muons_wp&quot;</span>, <span class="stringliteral">&quot;loose&quot;</span>));</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                m_electrons_wp = string_to_wp(config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;electrons_wp&quot;</span>, <span class="stringliteral">&quot;loose&quot;</span>));</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                m_electron_loose_wp_name = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;electrons_loose_wp_name&quot;</span>, <span class="stringliteral">&quot;cutBasedElectronID-Spring15-50ns-V1-standalone-loose&quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                m_electron_tight_wp_name = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;electrons_tight_wp_name&quot;</span>, <span class="stringliteral">&quot;cutBasedElectronID-Spring15-50ns-V1-standalone-tight&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                m_electron_loose_wp_name = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;electrons_loose_wp_name&quot;</span>, <span class="stringliteral">&quot;cutBasedElectronID-Spring15-25ns-V1-standalone-loose&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                m_electron_tight_wp_name = config.getUntrackedParameter&lt;std::string&gt;(<span class="stringliteral">&quot;electrons_tight_wp_name&quot;</span>, <span class="stringliteral">&quot;cutBasedElectronID-Spring15-25ns-V1-standalone-tight&quot;</span>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> analyze(<span class="keyword">const</span> edm::Event&amp;, <span class="keyword">const</span> edm::EventSetup&amp;, <span class="keyword">const</span> <a class="code" href="classProducersManager.html">ProducersManager</a>&amp;, <span class="keyword">const</span> <a class="code" href="classCategoryManager.html">CategoryManager</a>&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> analyze(<span class="keyword">const</span> edm::Event&amp;, <span class="keyword">const</span> edm::EventSetup&amp;, <span class="keyword">const</span> <a class="code" href="classProducersManager.html">ProducersManager</a>&amp;, <span class="keyword">const</span> <a class="code" href="classAnalyzersManager.html">AnalyzersManager</a>&amp;, <span class="keyword">const</span> <a class="code" href="classCategoryManager.html">CategoryManager</a>&amp;) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> registerCategories(<a class="code" href="classCategoryManager.html">CategoryManager</a>&amp; manager, <span class="keyword">const</span> edm::ParameterSet&amp;) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
@@ -148,6 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classAnalyzersManager_html"><div class="ttname"><a href="classAnalyzersManager.html">AnalyzersManager</a></div><div class="ttdef"><b>Definition:</b> AnalyzersManager.h:10</div></div>
 <div class="ttc" id="classCategoryManager_html"><div class="ttname"><a href="classCategoryManager.html">CategoryManager</a></div><div class="ttdef"><b>Definition:</b> Category.h:88</div></div>
 <div class="ttc" id="classProducersManager_html"><div class="ttname"><a href="classProducersManager.html">ProducersManager</a></div><div class="ttdef"><b>Definition:</b> ProducersManager.h:10</div></div>
 <div class="ttc" id="classDileptonAnalyzer_html"><div class="ttname"><a href="classDileptonAnalyzer.html">DileptonAnalyzer</a></div><div class="ttdef"><b>Definition:</b> DileptonAnalyzer.h:7</div></div>
@@ -155,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

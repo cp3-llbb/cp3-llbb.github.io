@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classCategory.html" title="Category" alt="" coords="5,107,80,133"/>
-<area shape="rect" id="node2" href="$classDileptonCategory.html" title="DileptonCategory" alt="" coords="136,81,259,108"/>
-<area shape="rect" id="node7" href="$classTwoMuonsCategory.html" title="TwoMuonsCategory" alt="" coords="128,132,267,159"/>
-<area shape="rect" id="node3" href="$classElElCategory.html" title="ElElCategory" alt="" coords="321,5,419,32"/>
-<area shape="rect" id="node4" href="$classElMuCategory.html" title="ElMuCategory" alt="" coords="317,56,423,83"/>
-<area shape="rect" id="node5" href="$classMuElCategory.html" title="MuElCategory" alt="" coords="317,107,423,133"/>
-<area shape="rect" id="node6" href="$classMuMuCategory.html" title="MuMuCategory" alt="" coords="315,157,425,184"/>
+<area shape="rect" id="node2" href="$classFramework_1_1DileptonCategory.html" title="Framework::DileptonCategory" alt="" coords="128,81,324,108"/>
+<area shape="rect" id="node7" href="$classTwoMuonsCategory.html" title="TwoMuonsCategory" alt="" coords="157,132,295,159"/>
+<area shape="rect" id="node3" href="$classFramework_1_1ElElCategory.html" title="Framework::ElElCategory" alt="" coords="378,5,550,32"/>
+<area shape="rect" id="node4" href="$classFramework_1_1ElMuCategory.html" title="Framework::ElMuCategory" alt="" coords="375,56,553,83"/>
+<area shape="rect" id="node5" href="$classFramework_1_1MuElCategory.html" title="Framework::MuElCategory" alt="" coords="375,107,553,133"/>
+<area shape="rect" id="node6" href="$classFramework_1_1MuMuCategory.html" title="Framework::MuMuCategory" alt="" coords="372,157,556,184"/>
 </map>

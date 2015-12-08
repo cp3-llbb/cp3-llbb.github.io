@@ -95,62 +95,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;DataFormats/PatCandidates/interface/Jet.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classJetsProducer.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJetsProducer.html">JetsProducer</a>: <span class="keyword">public</span> <a class="code" href="classCandidatesProducer.html">CandidatesProducer</a>&lt;pat::Jet&gt;, <span class="keyword">public</span> <a class="code" href="classBTaggingScaleFactors.html">BTaggingScaleFactors</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classJetsProducer.html">JetsProducer</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> ROOT::TreeGroup&amp; <a class="code" href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">tree</a>, <span class="keyword">const</span> edm::ParameterSet&amp; config):</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="classCandidatesProducer.html">CandidatesProducer</a>(name, tree, config), <a class="code" href="classBTaggingScaleFactors.html">BTaggingScaleFactors</a>(const_cast&lt;ROOT::TreeGroup&amp;&gt;(tree))</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            BTaggingScaleFactors::create_branches(config);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">if</span> (config.exists(<span class="stringliteral">&quot;btags&quot;</span>)) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; btags = config.getUntrackedParameter&lt;std::vector&lt;std::string&gt;&gt;(<span class="stringliteral">&quot;btags&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="comment">// Create branches </span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; btag: btags) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    m_btag_discriminators.emplace(btag, &amp;<a class="code" href="classCandidatesProducer.html">CandidatesProducer&lt;pat::Jet&gt;::tree</a>[btag].write&lt;std::vector&lt;float&gt;&gt;());</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classJetsProducer.html">JetsProducer</a>() {}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classJetsProducer.html#a1b0fe9885f43ba842b644ab1389c8467">   28</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classJetsProducer.html#a1b0fe9885f43ba842b644ab1389c8467">doConsumes</a>(<span class="keyword">const</span> edm::ParameterSet&amp; config, edm::ConsumesCollector&amp;&amp; collector)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            m_jets_token = collector.consumes&lt;std::vector&lt;pat::Jet&gt;&gt;(config.getUntrackedParameter&lt;edm::InputTag&gt;(<span class="stringliteral">&quot;jets&quot;</span>, edm::InputTag(<span class="stringliteral">&quot;slimmedJets&quot;</span>)));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classJetsProducer.html#ab6c9a8c9ac45890ffae8e551a3b2eb29">produce</a>(edm::Event&amp; event, <span class="keyword">const</span> edm::EventSetup&amp; eventSetup) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">float</span> getBTagDiscriminant(<span class="keywordtype">size_t</span> index, <span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> m_btag_discriminators.at(name)-&gt;at(index);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// Tokens</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        edm::EDGetTokenT&lt;std::vector&lt;pat::Jet&gt;&gt; m_jets_token;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::map&lt;std::string, std::vector&lt;float&gt;*&gt; m_btag_discriminators;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Tree members</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::vector&lt;float&gt;&amp; area = tree[<span class="stringliteral">&quot;area&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::vector&lt;int8_t&gt;&amp; partonFlavor = tree[<span class="stringliteral">&quot;partonFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::vector&lt;int8_t&gt;&amp; hadronFlavor = tree[<span class="stringliteral">&quot;hadronFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::vector&lt;float&gt;&amp; jecFactor = tree[<span class="stringliteral">&quot;jecFactor&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::vector&lt;float&gt;&amp; puJetID = tree[<span class="stringliteral">&quot;puJetID&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::vector&lt;float&gt;&amp; vtxMass = tree[<span class="stringliteral">&quot;vtxMass&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classJetsProducer.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJetsProducer.html">JetsProducer</a>: <span class="keyword">public</span> <a class="code" href="classCandidatesProducer.html">CandidatesProducer</a>&lt;pat::Jet&gt;, <span class="keyword">public</span> <a class="code" href="classBTaggingScaleFactors.html">BTaggingScaleFactors</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classJetsProducer.html">JetsProducer</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> ROOT::TreeGroup&amp; <a class="code" href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">tree</a>, <span class="keyword">const</span> edm::ParameterSet&amp; config):</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="classCandidatesProducer.html">CandidatesProducer</a>(name, tree, config), <a class="code" href="classBTaggingScaleFactors.html">BTaggingScaleFactors</a>(const_cast&lt;ROOT::TreeGroup&amp;&gt;(tree))</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            BTaggingScaleFactors::create_branches(config);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (config.exists(<span class="stringliteral">&quot;btags&quot;</span>)) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; btags = config.getUntrackedParameter&lt;std::vector&lt;std::string&gt;&gt;(<span class="stringliteral">&quot;btags&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="comment">// Create branches </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; btag: btags) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    m_btag_discriminators.emplace(btag, &amp;<a class="code" href="classCandidatesProducer.html">CandidatesProducer&lt;pat::Jet&gt;::tree</a>[btag].write&lt;std::vector&lt;float&gt;&gt;());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classJetsProducer.html">JetsProducer</a>() {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classJetsProducer.html#a1b0fe9885f43ba842b644ab1389c8467">   29</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classJetsProducer.html#a1b0fe9885f43ba842b644ab1389c8467">doConsumes</a>(<span class="keyword">const</span> edm::ParameterSet&amp; config, edm::ConsumesCollector&amp;&amp; collector)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            m_jets_token = collector.consumes&lt;std::vector&lt;pat::Jet&gt;&gt;(config.getUntrackedParameter&lt;edm::InputTag&gt;(<span class="stringliteral">&quot;jets&quot;</span>, edm::InputTag(<span class="stringliteral">&quot;slimmedJets&quot;</span>)));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classJetsProducer.html#ab6c9a8c9ac45890ffae8e551a3b2eb29">produce</a>(edm::Event&amp; event, <span class="keyword">const</span> edm::EventSetup&amp; eventSetup) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">float</span> getBTagDiscriminant(<span class="keywordtype">size_t</span> index, <span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> m_btag_discriminators.at(name)-&gt;at(index);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Tokens</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        edm::EDGetTokenT&lt;std::vector&lt;pat::Jet&gt;&gt; m_jets_token;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::map&lt;std::string, std::vector&lt;float&gt;*&gt; m_btag_discriminators;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// Tree members</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::vector&lt;float&gt;&amp; area = tree[<span class="stringliteral">&quot;area&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::vector&lt;int8_t&gt;&amp; partonFlavor = tree[<span class="stringliteral">&quot;partonFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::vector&lt;int8_t&gt;&amp; hadronFlavor = tree[<span class="stringliteral">&quot;hadronFlavor&quot;</span>].write&lt;std::vector&lt;int8_t&gt;&gt;();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::vector&lt;float&gt;&amp; jecFactor = tree[<span class="stringliteral">&quot;jecFactor&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::vector&lt;float&gt;&amp; puJetID = tree[<span class="stringliteral">&quot;puJetID&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::vector&lt;float&gt;&amp; vtxMass = tree[<span class="stringliteral">&quot;vtxMass&quot;</span>].write&lt;std::vector&lt;float&gt;&gt;();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classJetsProducer_html_a1b0fe9885f43ba842b644ab1389c8467"><div class="ttname"><a href="classJetsProducer.html#a1b0fe9885f43ba842b644ab1389c8467">JetsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> JetsProducer.h:28</div></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        BRANCH(passLooseID, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        BRANCH(passTightID, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        BRANCH(passTightLeptonVetoID, std::vector&lt;bool&gt;);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classJetsProducer_html_a1b0fe9885f43ba842b644ab1389c8467"><div class="ttname"><a href="classJetsProducer.html#a1b0fe9885f43ba842b644ab1389c8467">JetsProducer::doConsumes</a></div><div class="ttdeci">virtual void doConsumes(const edm::ParameterSet &amp;config, edm::ConsumesCollector &amp;&amp;collector) override</div><div class="ttdoc">Hook for the CMSSW consumes interface. </div><div class="ttdef"><b>Definition:</b> JetsProducer.h:29</div></div>
 <div class="ttc" id="classJetsProducer_html_ab6c9a8c9ac45890ffae8e551a3b2eb29"><div class="ttname"><a href="classJetsProducer.html#ab6c9a8c9ac45890ffae8e551a3b2eb29">JetsProducer::produce</a></div><div class="ttdeci">virtual void produce(edm::Event &amp;event, const edm::EventSetup &amp;eventSetup) override</div><div class="ttdoc">Main method of the producer, called for each event. </div><div class="ttdef"><b>Definition:</b> JetsProducer.cc:4</div></div>
 <div class="ttc" id="classBTaggingScaleFactors_html"><div class="ttname"><a href="classBTaggingScaleFactors.html">BTaggingScaleFactors</a></div><div class="ttdef"><b>Definition:</b> BTaggingScaleFactors.h:33</div></div>
 <div class="ttc" id="classCandidatesProducer_html"><div class="ttname"><a href="classCandidatesProducer.html">CandidatesProducer</a></div><div class="ttdef"><b>Definition:</b> CandidatesProducer.h:9</div></div>
-<div class="ttc" id="classJetsProducer_html"><div class="ttname"><a href="classJetsProducer.html">JetsProducer</a></div><div class="ttdef"><b>Definition:</b> JetsProducer.h:9</div></div>
-<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:125</div></div>
+<div class="ttc" id="classJetsProducer_html"><div class="ttname"><a href="classJetsProducer.html">JetsProducer</a></div><div class="ttdef"><b>Definition:</b> JetsProducer.h:10</div></div>
+<div class="ttc" id="classFramework_1_1Producer_html_a4a07ef0b9f14f2f9e4c5585b2542f784"><div class="ttname"><a href="classFramework_1_1Producer.html#a4a07ef0b9f14f2f9e4c5585b2542f784">Framework::Producer::tree</a></div><div class="ttdeci">ROOT::TreeGroup tree</div><div class="ttdoc">Access point to output tree. </div><div class="ttdef"><b>Definition:</b> Producer.h:130</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 16 2015 14:30:30 for CP3-llbb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
