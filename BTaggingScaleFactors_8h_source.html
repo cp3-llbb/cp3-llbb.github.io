@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> create_branches(<span class="keyword">const</span> edm::ParameterSet&amp;) <span class="keyword">final</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> store_scale_factors(Algorithm algo, Flavor flavor, <span class="keyword">const</span> std::vector&lt;float&gt;&amp; values) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> store_scale_factors(Algorithm algo, Flavor flavor, <span class="keyword">const</span> std::vector&lt;float&gt;&amp; values,<span class="keywordtype">bool</span> isData) <span class="keyword">final</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_scale_factor(Algorithm algo, <span class="keyword">const</span> std::string&amp; wp, <span class="keywordtype">size_t</span> index, Variation variation = Variation::Nominal) <span class="keyword">final</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
