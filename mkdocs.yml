@@ -9,6 +9,8 @@ copyright: 'Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain'
 nav:
   - Home: index.md
   - Framework:
+    - Overview: framework.md
+    - Jenkins CI: fwk_jenkins.md
     - Doxygen: doxyfwk/index.html
 
 # Extensions
@@ -21,6 +23,7 @@ markdown_extensions:
   - pymdownx.emoji
 
 plugins:
+  - markdownextradata
   - doxygen:
       tryclone: true
       packages:
@@ -43,6 +46,9 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/cp3-llbb'
+  framework:
+    cmsswrelease: CMSSW_8_0_30
+    defaultbranch: CMSSW_8_0_6p
 
 # Google Analytics
 # google_analytics:
