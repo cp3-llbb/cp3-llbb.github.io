@@ -1,0 +1,49 @@
+site_name: 'CP3-llb Analysis Tools'
+site_description: 'Documentation for the CP3-llbb Analysis Tools'
+site_author: 'IRMP/CP3, Université catholique de Louvain'
+site_url: 'https://cp3-lbb.github.io/'
+repo_name: 'cp3-llbb/cp3-lbb.github.io'
+repo_url: 'https://github.com/cp3-llbb/cp3-lbb.github.io'
+copyright: 'Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain'
+
+nav:
+  - Home: index.md
+  - Framework:
+    - Doxygen: doxyfwk/index.html
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+plugins:
+  - doxygen:
+      tryclone: true
+      packages:
+        - doxyfwk:
+            url    : https://github.com/cp3-llbb/Framework.git
+            config : docs/doxygen.cfg
+
+# Theming
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/cp3-llbb'
+
+# Google Analytics
+# google_analytics:
+#   - 'UA-XXXXXXXX-X'
+#   - 'auto'

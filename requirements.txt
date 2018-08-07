@@ -1,0 +1,5 @@
+mkdocs
+mkdocs-material
+Pygments
+pymdown-extensions
+git+https://github.com/pieterdavid/mkdocs-doxygen-plugin.git
