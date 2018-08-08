@@ -8,18 +8,16 @@ Once a build is started, the Pull Request status on GitHub is updated. Once done
 
 The Pull Request won't be mergeable until the Pull Request status is green.
 
-## Bootstrap
+!!! important "Bootstrap"
 
-**This part is very important**
+    Since the build is automatized, Jenkins needs to know how-to setup the CMSSW env by itself. To do that, two files are necessary:
 
-Since the build is automatized, Jenkins needs to know how-to setup the CMSSW env by itself. To do that, two files are necessary:
+    - ``CMSSW.release``: This file must contains only a string representing the CMSSW version to use to setup the framework. Be careful not to add a line break at the end of the line.
+    - `` CMSSW.arch``: The ``SCRAM_ARCH`` of the CMSSW release.
+    - ``bootstrap_jenkins.sh``: This file is a bash script executed by Jenkins just before building the framework, but after the CMSSW env is setup. You **must** use this file to install all the dependencies of the framework.
+    - ``jenkins_postbuild.sh``: This file is executed by Jenkins after the compilation.
 
- - ``CMSSW.release``: This file must contains only a string representing the CMSSW version to use to setup the framework. Be careful not to add a line break at the end of the line.
- - `` CMSSW.arch``: The ``SCRAM_ARCH`` of the CMSSW release.
- - ``bootstrap_jenkins.sh``: This file is a bash script executed by Jenkins just before building the framework, but after the CMSSW env is setup. You **must** use this file to install all the dependencies of the framework.
- - ``jenkins_postbuild.sh``: This file is executed by Jenkins after the compilation.
-
-**Do not forget to update these files when changes are done to the release or the dependencies, otherwise the build will fail.**
+    **Do not forget to update these files when changes are done to the release or the dependencies, otherwise the build will fail.**
 
 ## Technical details
 
@@ -28,8 +26,9 @@ Since the build is automatized, Jenkins needs to know how-to setup the CMSSW env
 
 A [github bot](https://github.com/cp3-llbb-bot) also exists; it's a generic github user, member of the cp3-llbb organization. It needs push authorization to a repository to properly update the PR status. Password for this user can be found on the protected CP3 [wiki](https://cp3.irmp.ucl.ac.be/projects/cp3admin/wiki/UsersPage/Private/Physics/Exp/llbb)
 
-**Note**: Sometimes, the container responsible for the build get stuck in creating phase and you'll need to kill it and retrigger a new build. To do that, connect to the OpenShift instance, and select on the left menu `Applications` → `Pods`. Click on the build instance in the list, and on the new page, select `Delete` in the `Actions` menu (top right). It may takes some time before the container is killed. If it's still stuck in deleting after a few minutes, you'll have to open a new ticket [here](https://cern.service-now.com/service-portal/service-element.do?name=PaaS-Web-App).
+!!! Note
+    Sometimes, the container responsible for the build get stuck in creating phase and you'll need to kill it and retrigger a new build. To do that, connect to the OpenShift instance, and select on the left menu `Applications` → `Pods`. Click on the build instance in the list, and on the new page, select `Delete` in the `Actions` menu (top right). It may takes some time before the container is killed. If it's still stuck in deleting after a few minutes, you'll have to open a new ticket [here](https://cern.service-now.com/service-portal/service-element.do?name=PaaS-Web-App).
 
 ## Troubleshooting
 
- - If a build/test fails because of unexpected connection glitch, you can re-trigger jenkins by commenting `please test` to the pull request
+If a build/test fails because of unexpected connection glitch, you can re-trigger jenkins by commenting `please test` to the pull request

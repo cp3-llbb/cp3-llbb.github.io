@@ -2,12 +2,12 @@
 
 Common framework for all cp3-llbb analyses
 
-*Please note:*
+!!! Note
 
-* The instructions are for the UCLouvain ingrid SLC6 cluster (to access SAMADhi)
-* You need the proper username and password to access SAMADhi :) If you don't know what this is about, ask around
-* The current state of the art mini-AOD documentation can be found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2015)
-* You will probably want to install as well [GridIn](https://github.com/cp3-llbb/GridIn) to run jobs on the grid, and one of the existing analyses ([TTAnalysis](https://github.com/cp3-llbb/TTAnalysis), [HHAnalysis](https://github.com/cp3-llbb/HHAnalysis), [ZAAnalysis](https://github.com/cp3-llbb/ZAAnalysis))
+    - The instructions are for the UCLouvain ingrid SLC6 cluster (to access SAMADhi)
+    - You need the proper username and password to access SAMADhi :) If you don't know what this is about, ask around
+    - The current state of the art mini-AOD documentation can be found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2015)
+    - You will probably want to install as well [GridIn](https://github.com/cp3-llbb/GridIn) to run jobs on the grid, and one of the existing analyses ([TTAnalysis](https://github.com/cp3-llbb/TTAnalysis), [HHAnalysis](https://github.com/cp3-llbb/HHAnalysis), [ZAAnalysis](https://github.com/cp3-llbb/ZAAnalysis))
 
 ## CMSSW release
 
@@ -48,5 +48,5 @@ cmsRun TestConfigurationMC.py
 * Any branches to merge into CMSSW, packages to add, version and ``SCRAM_ARCH`` changes should be added to ``bootstrap_jenkins.sh``, ``jenkins_postbuild.sh``, ``CMSSW.release`` and ``CMSSW.arch``, respectively, such that they are also picked up by Jenkins, more details [here](fwk_jenkins.md#Bootstrap).
 * The ```first_setup.sh``` script took care of adding ```origin``` as your own repo, so to push just do the usual ```git push origin my-new-branch```
 * If you change anything to the output trees (new or modified branches, new recipes etc.), the automatic tests (see below) will fail, because they compare the outputs to reference files.
-  You can resolve this by regenerating the reference files with the [`test/generate_reference_trees.sh`](test/generate_reference_trees.sh) script, after committing your other changes.
+  You can resolve this by regenerating the reference files with the [`test/generate_reference_trees.sh`](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/test/generate_reference_trees.sh) script, after committing your other changes.
   It will also print a summary of all differences in the output files. If these are as expected, you can make a new commit with the updated reference files.

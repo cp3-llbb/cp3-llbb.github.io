@@ -12,6 +12,7 @@ nav:
     - Overview: framework.md
     - Jenkins CI: fwk_jenkins.md
     - Doxygen: doxyfwk/index.html
+  - GridIn: gridin.md
 
 # Extensions
 markdown_extensions:
