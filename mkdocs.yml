@@ -13,10 +13,12 @@ nav:
     - Jenkins CI: fwk_jenkins.md
     - Doxygen: doxyfwk/index.html
   - GridIn: gridin.md
+  - plotIt: plotit.md
 
 # Extensions
 markdown_extensions:
   - admonition
+  - pymdownx.superfences
   - codehilite:
       guess_lang: false
   - toc:
