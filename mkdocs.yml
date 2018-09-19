@@ -7,7 +7,7 @@ repo_url: 'https://github.com/cp3-llbb/cp3-lbb.github.io'
 copyright: 'Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain'
 
 nav:
-  - Home: index.md
+  - Introduction: index.md
   - Framework:
     - Overview: framework.md
     - Jenkins CI: fwk_jenkins.md

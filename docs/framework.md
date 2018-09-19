@@ -21,10 +21,10 @@ source /nfs/soft/grid/ui_sl6/setup/grid-env.sh
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
 wget https://raw.githubusercontent.com/cp3-llbb/Framework/{{ framework.defaultbranch }}/setup_project_with_framework.sh
-source setup_project_with_framework.sh
+source setup_project_with_framework.sh --branch {{ framework.defaultbranch }}
 ```
 
-The [script](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/setup_project_with_framework.sh) above will set up a CMSSW release area, apply the recipes in [``bootstrap_jenkins.sh``](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/bootstrap_jenkins.sh) and [``jenkins_postbuild.sh``](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/jenkins_postbuild.sh), perform an initial build, and add your and your colleagues' forks on GitHub as remotes for your ``Framework`` clone.
+The [script](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/setup_project_with_framework.sh) above will set up a CMSSW release area, apply the recipes in [``bootstrap_jenkins.sh``](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/bootstrap_jenkins.sh) and [``jenkins_postbuild.sh``](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/jenkins_postbuild.sh), perform an initial build, and add your and your colleagues' forks on GitHub as remotes for your ``Framework`` clone (all those that have been pushed to in the last year; you can update the list by running ``updateremotes``).
 Through the options `--branch NAME` and `--pr ID`, a project area for a different version can also be created.
 
 If you are using ingrid, here's a useful alias to put in your ``bashrc`` file:
@@ -46,7 +46,7 @@ cmsRun TestConfigurationMC.py
 
 * Remember to *branch before committing anything*: ```git checkout -b my-new-branch```
 * Any branches to merge into CMSSW, packages to add, version and ``SCRAM_ARCH`` changes should be added to ``bootstrap_jenkins.sh``, ``jenkins_postbuild.sh``, ``CMSSW.release`` and ``CMSSW.arch``, respectively, such that they are also picked up by Jenkins, more details [here](fwk_jenkins.md#Bootstrap).
-* The ```first_setup.sh``` script took care of adding ```origin``` as your own repo, so to push just do the usual ```git push origin my-new-branch```
+* The ```updateremotes``` script (run from ```setup_project_with_framework.sh```) took care of adding ```origin``` as your own repo, so to push just do the usual ```git push origin my-new-branch```
 * If you change anything to the output trees (new or modified branches, new recipes etc.), the automatic tests (see below) will fail, because they compare the outputs to reference files.
   You can resolve this by regenerating the reference files with the [`test/generate_reference_trees.sh`](https://github.com/cp3-llbb/Framework/blob/{{ framework.defaultbranch }}/test/generate_reference_trees.sh) script, after committing your other changes.
   It will also print a summary of all differences in the output files. If these are as expected, you can make a new commit with the updated reference files.
