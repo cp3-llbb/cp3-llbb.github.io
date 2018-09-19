@@ -6,7 +6,7 @@ before_install:
 install:
 - pip install -r requirements.txt
 script:
-- mkdocs build --verbose --clean --strict
+- mkdocs build --verbose --clean
 deploy:
   provider: pages
   local-dir: site
