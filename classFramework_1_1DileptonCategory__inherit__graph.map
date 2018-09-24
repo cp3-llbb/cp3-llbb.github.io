@@ -1,7 +1,0 @@
-<map id="Framework::DileptonCategory" name="Framework::DileptonCategory">
-<area shape="rect" id="node3" href="$classFramework_1_1ElElCategory.html" title="Framework::ElElCategory" alt="" coords="378,5,550,32"/>
-<area shape="rect" id="node4" href="$classFramework_1_1ElMuCategory.html" title="Framework::ElMuCategory" alt="" coords="375,56,553,83"/>
-<area shape="rect" id="node5" href="$classFramework_1_1MuElCategory.html" title="Framework::MuElCategory" alt="" coords="375,107,553,133"/>
-<area shape="rect" id="node6" href="$classFramework_1_1MuMuCategory.html" title="Framework::MuMuCategory" alt="" coords="372,157,556,184"/>
-<area shape="rect" id="node2" href="$classCategory.html" title="Category" alt="" coords="5,81,80,108"/>
-</map>
