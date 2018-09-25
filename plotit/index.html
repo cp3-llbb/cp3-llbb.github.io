@@ -1,0 +1,1693 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the CP3-llbb Analysis Tools">
+      
+      
+        <link rel="canonical" href="https://cp3-lbb.github.io/plotit/">
+      
+      
+        <meta name="author" content="IRMP/CP3, Université catholique de Louvain">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>plotIt - CP3-llb Analysis Tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#plotit" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://cp3-lbb.github.io/" title="CP3-llb Analysis Tools" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                CP3-llb Analysis Tools
+              </span>
+              <span class="md-header-nav__topic">
+                plotIt
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/cp3-llbb/cp3-lbb.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      cp3-llbb/cp3-lbb.github.io
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://cp3-lbb.github.io/" title="CP3-llb Analysis Tools" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    CP3-llb Analysis Tools
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/cp3-llbb/cp3-lbb.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      cp3-llbb/cp3-lbb.github.io
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../framework/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fwk_jenkins/" title="Jenkins CI" class="md-nav__link">
+      Jenkins CI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../doxyfwk/index.html" title="Doxygen" class="md-nav__link">
+      Doxygen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../gridin/" title="GridIn" class="md-nav__link">
+      GridIn
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        plotIt
+      </label>
+    
+    <a href="./" title="plotIt" class="md-nav__link md-nav__link--active">
+      plotIt
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-time-setup-instructions" title="First time setup instructions" class="md-nav__link">
+    First time setup instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-run-command-line" title="Test run (command line)" class="md-nav__link">
+    Test run (command line)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-reference" title="Configuration file reference" class="md-nav__link">
+    Configuration file reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plotit-general-configuration" title="plotIt general ('configuration')" class="md-nav__link">
+    plotIt general ('configuration')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots-configuration-plots" title="Plots configuration ('plots')" class="md-nav__link">
+    Plots configuration ('plots')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-configuration-files" title="Files configuration ('files')" class="md-nav__link">
+    Files configuration ('files')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-fields" title="Additional fields" class="md-nav__link">
+    Additional fields
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups-groups" title="Groups ('groups')" class="md-nav__link">
+    Groups ('groups')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend-legend" title="Legend ('legend')" class="md-nav__link">
+    Legend ('legend')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systematics-configuration-systematics" title="Systematics configuration ('systematics')" class="md-nav__link">
+    Systematics configuration ('systematics')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-labels-labels" title="Additional labels ('labels')" class="md-nav__link">
+    Additional labels ('labels')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" title="Lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-operations" title="Renaming operations" class="md-nav__link">
+    Renaming operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-cheatsheets" title="Parameters cheatsheets" class="md-nav__link">
+    Parameters cheatsheets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-styles" title="Line styles" class="md-nav__link">
+    Line styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-widths" title="Line widths" class="md-nav__link">
+    Line widths
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-styles" title="Fill styles" class="md-nav__link">
+    Fill styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marker-styles" title="Marker styles" class="md-nav__link">
+    Marker styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colors" title="Colors" class="md-nav__link">
+    Colors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-time-setup-instructions" title="First time setup instructions" class="md-nav__link">
+    First time setup instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-run-command-line" title="Test run (command line)" class="md-nav__link">
+    Test run (command line)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-reference" title="Configuration file reference" class="md-nav__link">
+    Configuration file reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plotit-general-configuration" title="plotIt general ('configuration')" class="md-nav__link">
+    plotIt general ('configuration')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plots-configuration-plots" title="Plots configuration ('plots')" class="md-nav__link">
+    Plots configuration ('plots')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-configuration-files" title="Files configuration ('files')" class="md-nav__link">
+    Files configuration ('files')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-fields" title="Additional fields" class="md-nav__link">
+    Additional fields
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups-groups" title="Groups ('groups')" class="md-nav__link">
+    Groups ('groups')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend-legend" title="Legend ('legend')" class="md-nav__link">
+    Legend ('legend')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systematics-configuration-systematics" title="Systematics configuration ('systematics')" class="md-nav__link">
+    Systematics configuration ('systematics')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-labels-labels" title="Additional labels ('labels')" class="md-nav__link">
+    Additional labels ('labels')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" title="Lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-operations" title="Renaming operations" class="md-nav__link">
+    Renaming operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-cheatsheets" title="Parameters cheatsheets" class="md-nav__link">
+    Parameters cheatsheets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-styles" title="Line styles" class="md-nav__link">
+    Line styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-widths" title="Line widths" class="md-nav__link">
+    Line widths
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-styles" title="Fill styles" class="md-nav__link">
+    Fill styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marker-styles" title="Marker styles" class="md-nav__link">
+    Marker styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colors" title="Colors" class="md-nav__link">
+    Colors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/cp3-llbb/cp3-lbb.github.io/edit/master/docs/plotit.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="plotit">plotIt<a class="headerlink" href="#plotit" title="Permanent link">&para;</a></h1>
+<p>plotIt is a utility to plot ROOT histogram stacks. The input files corresponding to the different contributions and the histograms to fit are configured through a yaml file.</p>
+<h2 id="first-time-setup-instructions">First time setup instructions<a class="headerlink" href="#first-time-setup-instructions" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>git clone -o upstream https://github.com/cp3-llbb/plotIt.git <span class="c1"># inside $CMSSW_BASE/src/cp3_llbb</span>
+<span class="nb">cd</span> plotIt/
+
+<span class="c1"># Initialize the git remotes</span>
+<span class="nb">source</span> firstsetup.sh 
+<span class="c1"># Within-CMSSW and on ingrid specific install</span>
+cms_env <span class="c1"># specific to ingrid, aka &#39;module purge; module load grid/grid_environment_sl6; module load crab/crab3; module load cms/cmssw;&#39;</span>
+cmsenv
+<span class="nb">source</span> setup_for_cms_env.sh
+<span class="c1"># For a non-CMSSW and non-ingrid install (beware there is no cmsenv at all in this case):</span>
+<span class="c1"># source setup_sl6_env.sh</span>
+
+<span class="c1"># Build externals</span>
+<span class="nb">cd</span> external
+./build-external.sh
+<span class="c1"># Build the executable itself</span>
+<span class="nb">cd</span> ..
+make -j <span class="m">4</span>
+</pre></div>
+
+<h2 id="test-run-command-line">Test run (command line)<a class="headerlink" href="#test-run-command-line" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1"># Load the proper environment (if not already done)</span>
+<span class="nb">source</span> setup_sl6_env.sh
+<span class="c1"># Create some dumb root files to play with</span>
+<span class="nb">cd</span> <span class="nb">test</span>
+root -l -b -q generate_files.C
+<span class="c1"># Now plot stuff</span>
+./../plotIt -o plots/ example.yml
+<span class="c1"># Go to the plots directory to observe the beautiful plots</span>
+</pre></div>
+
+<h2 id="configuration-file-reference">Configuration file reference<a class="headerlink" href="#configuration-file-reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>Point</code>s and <code>Range</code>s are lists of two numbers: <code>[x,y]</code></li>
+<li><code>Position</code>s are lists of four numbers: <code>[x1, y1, x2, y2]</code></li>
+<li>Some strings are formatted using <a href="http://www.boost.org/doc/libs/1_60_0/libs/format/doc/format.html">boost::format</a>. Arguments passed to the formatting are described below.</li>
+<li>Strings used for labels, axis titles, legends, ... can use <a href="https://root.cern.ch/doc/master/classTLatex.html">TLatex</a></li>
+<li>Line <a href="#line-styles">styles</a> and <a href="#line-widths">widths</a>, <a href="#fill-styles">fill styles</a> and <a href="#marker-styles">marker styles</a> are numbers, see the corresponding <code>TAtt...</code> class references or the lists <a href="#parameters-cheatsheets">below</a> for some common values</li>
+<li><a href="#colors">Colors</a> are either basic ROOT colors (ie 42) or hexadecimal (alpha)RGB (ie #FFFFCC)</li>
+</ul>
+<h3 id="plotit-general-configuration">plotIt general ('configuration')<a class="headerlink" href="#plotit-general-configuration" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Action</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">width</td>
+<td align="left">number</td>
+<td align="left">Width (in pixels) of the plots</td>
+<td align="left"><code>800</code></td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">number</td>
+<td align="left">Height (in pixels) of the plots</td>
+<td align="left"><code>800</code></td>
+</tr>
+<tr>
+<td align="left">experiment</td>
+<td align="left">string</td>
+<td align="left">Name of the experiment, appearing in bold above the plot</td>
+<td align="left"><code>CMS</code></td>
+</tr>
+<tr>
+<td align="left">extra-label</td>
+<td align="left">string</td>
+<td align="left">Additional text above the plot</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">root</td>
+<td align="left">string</td>
+<td align="left">Path to the folder where the files are located</td>
+<td align="left"><code>./</code></td>
+</tr>
+<tr>
+<td align="left">scale</td>
+<td align="left">number</td>
+<td align="left">Global scaling of all non-data entries</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left"><strong>luminosity</strong></td>
+<td align="left">number</td>
+<td align="left">Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label.</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">luminosity-error</td>
+<td align="left">number</td>
+<td align="left">Fractional uncertainty on the integrated luminosity. Used for the yields table (uncertainty on MC and data/MC ratio) and the plot's MC &amp; ratio syst. error bands.</td>
+<td align="left"><code>0</code></td>
+</tr>
+<tr>
+<td align="left">luminosity-label</td>
+<td align="left">string</td>
+<td align="left">Luminosity label appearing above the plot. In the string, <code>%lumi%</code> gets replaced by the integrated luminosity in fb.</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">error-fill-color</td>
+<td align="left">color</td>
+<td align="left"></td>
+<td align="left"><code>42</code></td>
+</tr>
+<tr>
+<td align="left">error-fill-style</td>
+<td align="left">fill style</td>
+<td align="left"></td>
+<td align="left"><code>3154</code></td>
+</tr>
+<tr>
+<td align="left">fit-line-color</td>
+<td align="left">color</td>
+<td align="left"></td>
+<td align="left"><code>46</code></td>
+</tr>
+<tr>
+<td align="left">fit-line-style</td>
+<td align="left">line style</td>
+<td align="left"></td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">fit-line-width</td>
+<td align="left">line width</td>
+<td align="left"></td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">fit-error-fill-color</td>
+<td align="left">color</td>
+<td align="left"></td>
+<td align="left"><code>42</code></td>
+</tr>
+<tr>
+<td align="left">fit-error-fill-style</td>
+<td align="left">fill style</td>
+<td align="left"></td>
+<td align="left"><code>1001</code></td>
+</tr>
+<tr>
+<td align="left">fit-n-points</td>
+<td align="left">number</td>
+<td align="left"></td>
+<td align="left"><code>1000</code></td>
+</tr>
+<tr>
+<td align="left">ratio-fit-line-color</td>
+<td align="left">color</td>
+<td align="left"></td>
+<td align="left"><code>46</code></td>
+</tr>
+<tr>
+<td align="left">ratio-fit-line-style</td>
+<td align="left">line style</td>
+<td align="left"></td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">ratio-fit-line-width</td>
+<td align="left">line width</td>
+<td align="left"></td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">ratio-fit-error-fill-color</td>
+<td align="left">color</td>
+<td align="left"></td>
+<td align="left"><code>42</code></td>
+</tr>
+<tr>
+<td align="left">ratio-fit-error-fill-style</td>
+<td align="left">fill style</td>
+<td align="left"></td>
+<td align="left"><code>1001</code></td>
+</tr>
+<tr>
+<td align="left">ratio-fit-n-points</td>
+<td align="left">number</td>
+<td align="left"></td>
+<td align="left"><code>1000</code></td>
+</tr>
+<tr>
+<td align="left">blinded-range-fill-color</td>
+<td align="left">color</td>
+<td align="left"></td>
+<td align="left"><code>42</code></td>
+</tr>
+<tr>
+<td align="left">blinded-range-fill-style</td>
+<td align="left">fill style</td>
+<td align="left"></td>
+<td align="left"><code>1001</code></td>
+</tr>
+<tr>
+<td align="left">y-axis-format</td>
+<td align="left">formatted string</td>
+<td align="left">Arg. 1: plot's y-axis title; Arg. 2: plot's first bin's width</td>
+<td align="left"><code>%1% / %2$.2f</code></td>
+</tr>
+<tr>
+<td align="left">ratio-y-axis</td>
+<td align="left">string</td>
+<td align="left">Y axis title of the ratio plot</td>
+<td align="left"><code>Data / MC</code></td>
+</tr>
+<tr>
+<td align="left">mode</td>
+<td align="left">string</td>
+<td align="left"><code>tree</code> (fill TH1s from a tree on-the-fly) or <code>hist</code> (retrieve TH1s from files)</td>
+<td align="left"><code>hist</code></td>
+</tr>
+<tr>
+<td align="left">tree-name</td>
+<td align="left">string</td>
+<td align="left">Name of the TTree used to fill the histograms in <code>tree</code> mode</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">labels</td>
+<td align="left">Label</td>
+<td align="left">Extra labels' configurations (see below).</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">show-overflow</td>
+<td align="left">bool</td>
+<td align="left">Show under- and overflow</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">errors-type</td>
+<td align="left">string</td>
+<td align="left"><code>normal</code> (ie. sqrt(N)), <code>poisson</code> (68% Poisson interval) or <code>poisson2</code></td>
+<td align="left"><code>poisson</code></td>
+</tr>
+<tr>
+<td align="left">yields-table-stretch</td>
+<td align="left">number</td>
+<td align="left">Stretch of LaTeX table produced</td>
+<td align="left"><code>1.15</code></td>
+</tr>
+<tr>
+<td align="left">yields-table-align</td>
+<td align="left">string</td>
+<td align="left">Alignment of the LaTeX table. For now only <code>h</code> (processes horizontal, categories vertical) is supported.</td>
+<td align="left"><code>h</code></td>
+</tr>
+<tr>
+<td align="left">yields-table-text-align</td>
+<td align="left">string</td>
+<td align="left"><code>l</code>/<code>r</code>/<code>c</code>: alignment of text in the LaTeX table's entries.</td>
+<td align="left"><code>c</code></td>
+</tr>
+<tr>
+<td align="left">yields-table-numerical-precision-yields</td>
+<td align="left">number</td>
+<td align="left">Number of decimals used for the MC yields in the LaTeX table.</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">yields-table-numerical-precision-ratio</td>
+<td align="left">number</td>
+<td align="left">Number of decimals used for the data/MC ratio in the LaTeX table.</td>
+<td align="left"><code>2</code></td>
+</tr>
+<tr>
+<td align="left">line-color</td>
+<td align="left">color</td>
+<td align="left">Default color of lines</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">line-type</td>
+<td align="left">line style</td>
+<td align="left">Default style (type) of lines</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">line-width</td>
+<td align="left">number</td>
+<td align="left">Default width of lines</td>
+<td align="left"><code>1</code></td>
+</tr>
+<tr>
+<td align="left">book-keeping-file</td>
+<td align="left">string</td>
+<td align="left">If set, store all the produced plots into this file in addition to create graphic files</td>
+<td align="left">none</td>
+</tr>
+<tr>
+<td align="left">x-axis-label-size</td>
+<td align="left">number</td>
+<td align="left">The size of the labels on the x-axis, in pixel</td>
+<td align="left"><code>18</code></td>
+</tr>
+<tr>
+<td align="left">y-axis-label-size</td>
+<td align="left">number</td>
+<td align="left">The size of the labels on the y-axis, in pixel</td>
+<td align="left"><code>18</code></td>
+</tr>
+<tr>
+<td align="left">x-axis-top-ticks</td>
+<td align="left">bool</td>
+<td align="left">Show ticks at the top of the frame</td>
+<td align="left"><code>True</code></td>
+</tr>
+<tr>
+<td align="left">y-axis-right-ticks</td>
+<td align="left">bool</td>
+<td align="left">Show ticks at the right of the frame</td>
+<td align="left"><code>True</code></td>
+</tr>
+<tr>
+<td align="left">transparent-background</td>
+<td align="left">bool</td>
+<td align="left">Transparent background for canvas and legend</td>
+<td align="left"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="plots-configuration-plots">Plots configuration ('plots')<a class="headerlink" href="#plots-configuration-plots" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Action</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>exclude</td>
+<td>string</td>
+<td>Regexp allowing to exlude histograms present in the files whose name matches the plot's name</td>
+<td></td>
+</tr>
+<tr>
+<td>x-axis</td>
+<td>string</td>
+<td>x-axis title</td>
+<td></td>
+</tr>
+<tr>
+<td>y-axis</td>
+<td>string</td>
+<td>y-axis title</td>
+<td><code>Events</code></td>
+</tr>
+<tr>
+<td>y-axis-format</td>
+<td>formatted string</td>
+<td>Overrides plotIt option.</td>
+<td></td>
+</tr>
+<tr>
+<td>normalized</td>
+<td>bool</td>
+<td>Normalize data/each signal/total MC to 1.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>no-data</td>
+<td>bool</td>
+<td>Do not plot data.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>override</td>
+<td>bool</td>
+<td>If any plot has this field set to true, only plots which do will be produced.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>log-y</td>
+<td>bool</td>
+<td>Log-scale on y-axis. Special value: <code>Both</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>log-x</td>
+<td>bool</td>
+<td>Log-scale on x-axis. Special value: <code>Both</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>save-extensions</td>
+<td>list of strings</td>
+<td>Write plot to file in each of this formats (supported by <code>TCanvas::Print()</code>)</td>
+<td><code>[pdf]</code></td>
+</tr>
+<tr>
+<td>show-ratio</td>
+<td>bool</td>
+<td>Show ratio plot under main plot.</td>
+<td>false</td>
+</tr>
+<tr>
+<td>fit</td>
+<td>bool</td>
+<td>Do a fit</td>
+<td>false</td>
+</tr>
+<tr>
+<td>fit-function</td>
+<td>string</td>
+<td>Function used for the fit.</td>
+<td><code>gaus</code></td>
+</tr>
+<tr>
+<td>fit-legend</td>
+<td>formatted string</td>
+<td>Fit results. Arg. i: fitted parameter i.</td>
+<td><code>#scale[1.6]{#splitline{#mu = %2$.3f}{#sigma = %3$.3f}}</code></td>
+</tr>
+<tr>
+<td>fit-legend-position</td>
+<td>Point</td>
+<td>Position of the fit results</td>
+<td><code>[0.22, 0.87]</code></td>
+</tr>
+<tr>
+<td>fit-range</td>
+<td>Range</td>
+<td>Restrict fit to this range</td>
+<td></td>
+</tr>
+<tr>
+<td>fit-ratio</td>
+<td>bool</td>
+<td>Fit the ratio plot</td>
+<td>false</td>
+</tr>
+<tr>
+<td>ratio-fit-function</td>
+<td>string</td>
+<td>Function used for the ratio fit.</td>
+<td><code>pol1</code></td>
+</tr>
+<tr>
+<td>ratio-fit-legend</td>
+<td>formatted string</td>
+<td>Ratio fit results. Arg. i: fitted parameter i.</td>
+<td></td>
+</tr>
+<tr>
+<td>ratio-fit-legend-position</td>
+<td>Point</td>
+<td>Position of the ratio fit results</td>
+<td><code>[0.20, 0.38]</code></td>
+</tr>
+<tr>
+<td>ratio-fit-range</td>
+<td>Range</td>
+<td>Restrict ratio fit to this range</td>
+<td></td>
+</tr>
+<tr>
+<td>show-errors</td>
+<td>bool</td>
+<td>Show errors on data points.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>x-axis-range</td>
+<td>Range</td>
+<td>Range of x-axis.</td>
+<td>TH1's range</td>
+</tr>
+<tr>
+<td>log-x-axis-range</td>
+<td>Range</td>
+<td>Range of x-axis to be applied only if the x axis is in log scale.</td>
+<td>Same as x-axis-range</td>
+</tr>
+<tr>
+<td>y-axis-range</td>
+<td>Range</td>
+<td>Range of y-axis.</td>
+<td>Computed from each TH1's range</td>
+</tr>
+<tr>
+<td>log-y-axis-range</td>
+<td>Range</td>
+<td>Range of y-axis to be applied only if the y axis is in log scale.</td>
+<td>Same as y-axis-range</td>
+</tr>
+<tr>
+<td>ratio-y-axis-range</td>
+<td>Range</td>
+<td>Range of y-axis for ratio</td>
+<td><code>[0.5, 1.5]</code></td>
+</tr>
+<tr>
+<td>blinded-range</td>
+<td>Range</td>
+<td>Blind a range of data in the plot. Note that the bins that include the values used to specify the range will be blinded, and that the left edge is included in a bin (so you may have to write 4.9999 to blind up to 5, itself excluded).</td>
+<td></td>
+</tr>
+<tr>
+<td>y-axis-show-zero</td>
+<td>bool</td>
+<td>Force y-axis range to go down to zero (might not be the case for flat distributions).</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>inherits-from</td>
+<td>string</td>
+<td></td>
+<td><code>TH1</code></td>
+</tr>
+<tr>
+<td>rebin</td>
+<td>number</td>
+<td>Rebin: merge <code>x</code> bins into one</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>labels</td>
+<td>Label</td>
+<td>Extra labels' configurations (see below).</td>
+<td></td>
+</tr>
+<tr>
+<td>extra-label</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>legend-position</td>
+<td>Position</td>
+<td>Overrides plotIt option.</td>
+<td></td>
+</tr>
+<tr>
+<td>legend-columns</td>
+<td>number</td>
+<td>Overrides plotIt option.</td>
+<td></td>
+</tr>
+<tr>
+<td>show-overflow</td>
+<td>bool</td>
+<td>Overrides plotIt option.</td>
+<td></td>
+</tr>
+<tr>
+<td>errors-type</td>
+<td>string</td>
+<td>Overrides plotIt option.</td>
+<td></td>
+</tr>
+<tr>
+<td>binning-x</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>binning-y</td>
+<td>number</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>draw-string</td>
+<td>string</td>
+<td>In <code>tree</code> mode, formula used to fill the histogram</td>
+<td></td>
+</tr>
+<tr>
+<td>selection-string</td>
+<td>string</td>
+<td>In <code>tree</code> mode, formula used to select events when filling histogram</td>
+<td></td>
+</tr>
+<tr>
+<td>for-yields</td>
+<td>bool</td>
+<td>Plot defines an entry as a category in the LaTeX yields table.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>yields-title</td>
+<td>string</td>
+<td>Name of the category in the table. Must be valid LaTeX text string!</td>
+<td>plot's name</td>
+</tr>
+<tr>
+<td>yields-table-order</td>
+<td>number</td>
+<td>Order of appearance of the category in the yields table (small=up).</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>vertical-lines</td>
+<td><a href="#lines">Line</a></td>
+<td>Draw vertical lines on the plot</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>horizontal-lines</td>
+<td><a href="#lines">Line</a></td>
+<td>Draw horizontal lines on the plot</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>lines</td>
+<td><a href="#lines">Line</a></td>
+<td>Draw arbitrary lines on the plot</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>rename</td>
+<td>List of <a href="#renaming-operations">renaming operations</a></td>
+<td>Apply a set of renaming operations to the output filename</td>
+<td></td>
+</tr>
+<tr>
+<td>sort-by-yields</td>
+<td>bool</td>
+<td>If <code>true</code>, histograms inside a given stack are sorted by yields, the smallest one at the bottom of the stack. This is the default behavior. Set to <code>false</code> to disable.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>x-axis-label-size</td>
+<td>number</td>
+<td>The size of the labels on the x-axis, in pixel</td>
+<td>Value of <code>x-axis-label-size</code> of the main configuration</td>
+</tr>
+<tr>
+<td>y-axis-label-size</td>
+<td>number</td>
+<td>The size of the labels on the y-axis, in pixel</td>
+<td>Value of <code>y-axis-label-size</code> of the main configuration</td>
+</tr>
+<tr>
+<td>x-axis-hide-ticks</td>
+<td>bool</td>
+<td>Hide ticks on the <code>x</code> axis</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td>y-axis-hide-ticks</td>
+<td>bool</td>
+<td>Hide ticks on the <code>y</code> axis</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td>ratio-y-axis</td>
+<td>string</td>
+<td>Y axis title of the ratio plot</td>
+<td>Value of <code>ratio-y-axis</code> of the main configuration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="files-configuration-files">Files configuration ('files')<a class="headerlink" href="#files-configuration-files" title="Permanent link">&para;</a></h3>
+<p>Each MC contribution is scaled by <code>plotIt.scale*plotIt.luminosity*scale*cross-section*branching-ratio/generated-events</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Action</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td><code>data</code>, <code>mc</code> (all MC are stacked based on their <code>stack-index</code>) or <code>signal</code> (not stacked)</td>
+<td><code>mc</code></td>
+</tr>
+<tr>
+<td>scale</td>
+<td>number</td>
+<td>Scale this contribution</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>cross-section</td>
+<td>number</td>
+<td>Cross-section of the process</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>branching-ratio</td>
+<td>number</td>
+<td>Branching ratio of the process</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>generated-events</td>
+<td>number</td>
+<td>Careful! Sum of generated event weights! Can be different from the number of generated events.</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>order</td>
+<td>number</td>
+<td>Order in which the histograms are stacked (concerns MC only). Small=low.</td>
+<td></td>
+</tr>
+<tr>
+<td>legend</td>
+<td>string</td>
+<td>Name of the file in the legend, unless <code>group</code> is defined .</td>
+<td></td>
+</tr>
+<tr>
+<td>group</td>
+<td>Group</td>
+<td>Refers to a legend group (see below)</td>
+<td></td>
+</tr>
+<tr>
+<td>yields-group</td>
+<td>string</td>
+<td>Used to group contributions in the LaTeX yields table (does't use a "group" node such as the legend groups).</td>
+<td>In this order, defaults to <code>group</code>, <code>legend</code> or the file's name.</td>
+</tr>
+<tr>
+<td>systematics</td>
+<td>Systematics</td>
+<td>Set of systematics nodes, as defined below.</td>
+<td></td>
+</tr>
+<tr>
+<td>drawing-options</td>
+<td>string</td>
+<td>Possibility to override TH1::Draw() option.</td>
+<td><code>hist</code> for signals and MC, <code>P</code> for data.</td>
+</tr>
+<tr>
+<td>fill-color</td>
+<td>color</td>
+<td>For this and the following: <code>-1</code> means that the quantity is not set.</td>
+<td>MC: <code>1</code>, else: <code>-1</code></td>
+</tr>
+<tr>
+<td>fill-type</td>
+<td>fill style</td>
+<td></td>
+<td>MC: <code>1001</code> , signal: <code>0</code>, else: <code>-1</code></td>
+</tr>
+<tr>
+<td>line-color</td>
+<td>color</td>
+<td></td>
+<td>MC: <code>-1</code>, else: <code>1</code></td>
+</tr>
+<tr>
+<td>line-type</td>
+<td>line style</td>
+<td></td>
+<td>signal: <code>2</code>, else: <code>-1</code></td>
+</tr>
+<tr>
+<td>line-width</td>
+<td>line width</td>
+<td></td>
+<td>MC: <code>0</code>, else: <code>1</code></td>
+</tr>
+<tr>
+<td>marker-color</td>
+<td>color</td>
+<td></td>
+<td>MC &amp; signal: <code>-1</code>, else: <code>1</code></td>
+</tr>
+<tr>
+<td>marker-type</td>
+<td>marker style</td>
+<td></td>
+<td>MC &amp; signal: <code>-1</code>, else: <code>20</code></td>
+</tr>
+<tr>
+<td>marker-size</td>
+<td>number</td>
+<td></td>
+<td>MC &amp; signal: <code>-1</code>, else: <code>1</code></td>
+</tr>
+<tr>
+<td>stack-index</td>
+<td>number</td>
+<td>Only MC files with the same <code>stack-index</code> are stacked together. Useful to have multiple stacks in the same plot</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>rename</td>
+<td>List of <a href="#renaming-operations">renaming operations</a></td>
+<td>Apply a set of renaming operations to all the histograms loaded from this file. It can be used for example to plot two different histograms from the same input file</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-fields">Additional fields<a class="headerlink" href="#additional-fields" title="Permanent link">&para;</a></h3>
+<h4 id="groups-groups">Groups ('groups')<a class="headerlink" href="#groups-groups" title="Permanent link">&para;</a></h4>
+<h4 id="legend-legend">Legend ('legend')<a class="headerlink" href="#legend-legend" title="Permanent link">&para;</a></h4>
+<h4 id="systematics-configuration-systematics">Systematics configuration ('systematics')<a class="headerlink" href="#systematics-configuration-systematics" title="Permanent link">&para;</a></h4>
+<h4 id="additional-labels-labels">Additional labels ('labels')<a class="headerlink" href="#additional-labels-labels" title="Permanent link">&para;</a></h4>
+<p>Each plot can be assigned a set of labels. A label is a custom string which can be positioned anywhere on the canvas. You can defined labels as follow:</p>
+<p><div class="codehilite"><pre><span></span>labels:
+  - {&lt;label1&gt;}
+  - {&lt;label2&gt;}
+</pre></div>
+Each label has the following fields:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Type</th>
+<th align="left">Action</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>text</strong></td>
+<td align="left">string</td>
+<td align="left">Text of the label. Support <code>TLatex</code> syntax (<code>#splitline{}{}</code> is especially useful for multi-line labels)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>position</strong></td>
+<td align="left">Point</td>
+<td align="left">Position of the label on the canvas</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">size</td>
+<td align="left">number</td>
+<td align="left">Font size of the label (in pixel)</td>
+<td align="left"><code>18</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="codehilite"><pre><span></span>plots:
+  &#39;Plot&#39;:
+    x-axis: &quot;X axis&quot;
+    y-axis: &quot;Y axis&quot;
+    labels:
+      - {text: &#39;Label&#39;, position: [0.7, 0.7]}
+      - {text: &#39;Label 2&#39;, position: [0.3, 0.7]}
+</pre></div>
+
+</div>
+<h4 id="lines">Lines<a class="headerlink" href="#lines" title="Permanent link">&para;</a></h4>
+<p>You can draw lines over a plot using the <code>vertical-lines</code>, <code>horizontal-lines</code> and <code>lines</code> plot options. Each option accepts an <code>array</code> of <code>line</code>. A <code>line</code> is defined:</p>
+<ul>
+<li>By a number for <code>vertical-lines</code> and <code>horizontal-lines</code>. In this case, the number represents the <code>x</code> or <code>y</code> coordinate of the line (in plot axis units), and the line will span across all the plot.</li>
+<li>By an <code>array</code> of 2 <code>Point</code>s for <code>lines</code>, where the <code>Point</code>s represent respectively the start point and the end point of the line.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>in <code>lines</code> definition, you can use the special value <code>.nan</code> for a point coordinate. This value will automatically be replaced by the maximum or minimum of the x or y axis, depending on which place it's used.</p>
+</div>
+<p>In addition, styling can be applied to lines either globally in the <code>configuration</code> part, or individually for each line.</p>
+<ul>
+<li>In global configuration, you can set the <code>line-color</code>, <code>line-width</code> and <code>line-type</code> options. This will affect all lines.</li>
+<li>If you want to change the style individually, then you must convert the <code>line</code> definition into a <code>map</code>. The <code>value</code> key will hold the previous line definition (ie, either a number or an <code>array</code> of 2 <code>Point</code>s), and you can set the <code>line-color</code>, <code>line-width</code> and <code>line-type</code> as you would do in the global configuration.</li>
+</ul>
+<p>If you want a specific line to be drawn on the ratio instead of the main plot, you can set the <code>pad</code> option to <code>bottom</code> (it defaults to <code>top</code>).</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">plots</span><span class="p p-Indicator">:</span>
+  <span class="s">&#39;histo1&#39;</span><span class="p p-Indicator">:</span>
+    <span class="c1"># Draw two vertical lines at x = 3 and x = 7. The first line is stylized individually and drawn on the ratio</span>
+    <span class="l l-Scalar l-Scalar-Plain">vertical-lines</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span>
+          <span class="nv">line-color</span><span class="p p-Indicator">:</span> <span class="nv">10</span><span class="p p-Indicator">,</span>
+          <span class="nv">line-type</span><span class="p p-Indicator">:</span> <span class="nv">4</span><span class="p p-Indicator">,</span>
+          <span class="nv">pad</span><span class="p p-Indicator">:</span> <span class="nv">bottom</span><span class="p p-Indicator">,</span>
+          <span class="nv">value</span><span class="p p-Indicator">:</span> <span class="nv">3</span>
+        <span class="p p-Indicator">}</span><span class="err">,</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="c1"># Draw one horizontal line at y = 80</span>
+    <span class="l l-Scalar l-Scalar-Plain">horizontal-lines</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+    <span class="c1"># Draw:</span>
+    <span class="c1"># 1 line from (3, 20) -&gt; (8, 90)</span>
+    <span class="c1"># 1 vertical line at x = 5 (.nan is replaced automatically by the minimum and maximum of the y-axis)</span>
+    <span class="l l-Scalar l-Scalar-Plain">lines</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="p p-Indicator">[[</span><span class="nv">3</span><span class="p p-Indicator">,</span> <span class="nv">20</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">8</span><span class="p p-Indicator">,</span> <span class="nv">90</span><span class="p p-Indicator">]]</span>
+      <span class="p p-Indicator">-</span> <span class="p p-Indicator">[[</span><span class="nv">5</span><span class="p p-Indicator">,</span> <span class="nv">.nan</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">5</span><span class="p p-Indicator">,</span> <span class="nv">.nan</span><span class="p p-Indicator">]]</span>
+</pre></div>
+
+</div>
+<h4 id="renaming-operations">Renaming operations<a class="headerlink" href="#renaming-operations" title="Permanent link">&para;</a></h4>
+<p>A renaming operation is defined in YAML as a dictionary with the keys <code>from</code> and <code>to</code>. <code>from</code> is a regular expression following the <a href="https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions">extended POSIX syntax</a>. Any string matching this regular expression will be replaced by <code>to</code>. Matching groups are supported and can be accessed using the <code>\N</code> syntax, where <code>N</code> is the index of the matching group.</p>
+<p>The <code>rename</code> option expect a <strong>list</strong> of operation. Renaming operations are applied in sequence, starting from the first occurrence.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">files</span><span class="p p-Indicator">:</span>
+    <span class="s">&#39;file.root&#39;</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">rename</span><span class="p p-Indicator">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">from</span><span class="p p-Indicator">:</span> <span class="s">&#39;([[:alpha:]+)_cut$&#39;</span>
+              <span class="l l-Scalar l-Scalar-Plain">to</span><span class="p p-Indicator">:</span> <span class="s">&#39;\1_nocut&#39;</span>
+</pre></div>
+
+</div>
+<h3 id="parameters-cheatsheets">Parameters cheatsheets<a class="headerlink" href="#parameters-cheatsheets" title="Permanent link">&para;</a></h3>
+<h4 id="line-styles">Line styles<a class="headerlink" href="#line-styles" title="Permanent link">&para;</a></h4>
+<p><img alt="line styles from ROOT" src="https://root.cern.ch/root/html/MACRO_TAttLine_5.gif" /></p>
+<h4 id="line-widths">Line widths<a class="headerlink" href="#line-widths" title="Permanent link">&para;</a></h4>
+<p><img alt="line widths from ROOT" src="https://root.cern.ch/root/html/MACRO_TAttLine_3.gif" /></p>
+<h4 id="fill-styles">Fill styles<a class="headerlink" href="#fill-styles" title="Permanent link">&para;</a></h4>
+<p><img alt="fill styles from ROOT" src="https://root.cern.ch/root/html/MACRO_TAttFill_5.gif" /></p>
+<h4 id="marker-styles">Marker styles<a class="headerlink" href="#marker-styles" title="Permanent link">&para;</a></h4>
+<p><img alt="marker styles from ROOT" src="https://root.cern.ch/root/html/MACRO_TAttMarker_3.gif" /></p>
+<h4 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">&para;</a></h4>
+<p>ROOT basic colors</p>
+<p><img alt="basic colors from ROOT" src="https://root.cern.ch/root/html/MACRO_TColor_1.gif" /></p>
+<p><img alt="hexadecimal (alpha)RGB overview" src="http://www.lug.or.kr/files/cheat_sheet/rgb-hex-cheat-sheet-v1.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../gridin/" title="GridIn" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                GridIn
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/cp3-llbb" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
