@@ -1,9 +1,9 @@
-site_name: 'CP3-llb Analysis Tools'
+site_name: 'CP3-llbb Analysis Tools'
 site_description: 'Documentation for the CP3-llbb Analysis Tools'
 site_author: 'IRMP/CP3, Université catholique de Louvain'
-site_url: 'https://cp3-lbb.github.io/'
-repo_name: 'cp3-llbb/cp3-lbb.github.io'
-repo_url: 'https://github.com/cp3-llbb/cp3-lbb.github.io'
+site_url: 'https://cp3-llbb.github.io/'
+repo_name: 'cp3-llbb/cp3-llbb.github.io'
+repo_url: 'https://github.com/cp3-llbb/cp3-llbb.github.io'
 copyright: 'Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain'
 
 nav:
