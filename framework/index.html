@@ -309,6 +309,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#finding-your-way-around-the-different-modules" title="Finding your way around the different modules" class="md-nav__link">
+    Finding your way around the different modules
+  </a>
+  
+</li>
+      
       
       
       
@@ -421,6 +428,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#finding-your-way-around-the-different-modules" title="Finding your way around the different modules" class="md-nav__link">
+    Finding your way around the different modules
+  </a>
+  
+</li>
+      
       
       
       
@@ -483,6 +497,54 @@ cmsRun TestConfigurationMC.py
   You can resolve this by regenerating the reference files with the <a href="https://github.com/cp3-llbb/Framework/blob/CMSSW_8_0_6p/test/generate_reference_trees.sh"><code>test/generate_reference_trees.sh</code></a> script, after committing your other changes.
   It will also print a summary of all differences in the output files. If these are as expected, you can make a new commit with the updated reference files.</li>
 </ul>
+<h2 id="finding-your-way-around-the-different-modules">Finding your way around the different modules<a class="headerlink" href="#finding-your-way-around-the-different-modules" title="Permanent link">&para;</a></h2>
+<p>The Framework configures a CMSSW sequence and runs an <a href="http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_30/doc/html/d9/d55/classedm_1_1EDProducer.html"><code>edm::EDProducer</code></a> module, <a href="../doxyfwk/classExTreeMaker.html"><code>ExTreeMaker</code></a>,
+to select events and create a TTree for analysis.
+The structure is modular, so most of the actual code to select events and fill
+branches is in the producers, analyzers, filters and categories;
+<code>ExTreeMaker</code> only knows the interface Producer the different components implement (technically: it only has a pointer to the interface class, and the instances
+are created by a factory - so you can also add modules in another package).</p>
+<p>Producers (<a href="../doxyfwk/classFramework_1_1Producer.html"><code>Framework::producer</code></a>)
+are run first, and fill branches for event information that is present
+in the input file (so not analysis-specific): leptons, jets, event information,
+weight etc., while analyzers (<a href="../doxyfwk/classFramework_1_1Analyzer.html"><code>Framework::analyzer</code></a>
+are run later, and typically define analysis-specific and derived objects
+(selected and cross-cleaned objects, N-object combined candidates).
+The decision if an the output tree should be written for an event is taken
+based on the categories (instances of <a href="../doxyfwk/classCategory.html"><code>Category</code></a> implementations, see below).
+In practice a typical analysis will set up (and perhaps slightly customize)
+the default set of producers, define one (or more) analyzers,
+and configure (or extend) categories.</p>
+<p>Producers and analyzers can readily be understood from an example, but categories
+involve more interacting components, so the overall picture may be a bit more confusing.
+The <a href="../doxyfwk/classExTreeMaker.html#a72a8cdffae7a6815bb96907758226220"><code>ExTreeMaker::produce</code></a> method,
+which is called for every event, first checks if the event passes all filters
+(another, less frequently used, module type - the interface only specifies a method
+that returns true or false for every event, without access to the producers),
+and then executes the following steps:</p>
+<ul>
+<li>run all producers</li>
+<li>check if the event is in any of the categories, based on the producers'
+  outputs only (<a href="../doxyfwk/classCategory.html#a56ad0ab7e01dda49d614885699ef52e3"><code>Category::event_in_category_pre_analyzers</code></a>), and skip to the next event if not</li>
+<li>run all analyzers</li>
+<li>check if the event is in any of the categories <em>that selected it before</em>,
+  based on the analyzers' (and produces') outputs (<a href="../doxyfwk/classCategory.html#a7953b521891ece15497fddd5f1e27ef5"><code>Category::event_in_category_post_analyzers</code></a>),
+  and skip to the next event if not</li>
+<li>save the entry in the tree</li>
+</ul>
+<p>Two more things are useful to know about categories: they are register by
+an analyzer (any analyzer, so one could have two analyzers that each define
+some categories - the event will be in the output tree as soon as any category
+from either set accepts the event), and they can also define a set of selections
+(cuts). These need to be registered (in <a href="../doxyfwk/classCategory.html#a2ea8fab21f6d1b7a48b6813eeb8ae42d"><code>Category::register_cuts(cutManager)</code></a>,
+with <a href="../doxyfwk/classCutManager.html#af2790880986ac8723e10b03f1286b022"><code>CutManager::new_cut(name, description)</code></a>),
+and set to <code>true</code>, if applicable, for every event (with <a href="../doxyfwk/classCutManager.html#a0de3fda9549cd91e91d04dcd6e75a16f"><code>CutManager::pass_cut(cutName)</code></a> -
+this can be done either before or after running the analyzers (from
+<a href="../doxyfwk/classCategory.html#a27f95232305f83c3c807cf58a4146ee2"><code>Category::evaluate_cuts_pre_analyzers</code></a>
+or <a href="../doxyfwk/classCategory.html#af26360bf4b404d7bad835641313f2842"><code>Category::evaluate_cuts_post_analyzers</code></a>, respectively).</p>
+<p>The category responses are filled in branches with name <code>&lt;prefix&gt;&lt;categoryname&gt;_category</code>,
+and the cut responses in branches with name <code>&lt;prefix&gt;&lt;categoryname&gt;_&lt;cutname&gt;_cut</code>,
+where the prefix is taken from the analyzer that registered the category.</p>
                 
                   
                 
