@@ -29,7 +29,7 @@ Specific instructions on how to install and use them should be in the README of 
 -  using the grid:
     * now that we have some CMSSW code compiling and running, you probably want to run it [on the grid](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid), with [CRAB3](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCrab), in order to create the trees for many MC and data samples, to perform some analysis
     * [GridIn](https://github.com/cp3-llbb/GridIn) is our CMSSW package to easily do so: it prepares the crab config files so that you just have to launch them
-    * if your grid jobs are successful, you want to write down somewhere what is it you've down. To do so we use [SAMADhi](https://github.com/cp3-llbb/SAMADhi), our local database, to bookkeep what code has been run to produce the trees and where they are stored. The format and links of the database are the displayed below.
+    * if your grid jobs are successful, you want to write down somewhere what is it you've down. To do so we use [SAMADhi](https://github.com/cp3-llbb/SAMADhi), our local database (there is also a [web interface](https://cp3.irmp.ucl.ac.be/samadhi/index.php)), to bookkeep what code has been run to produce the trees and where they are stored. The format and links of the database are the displayed below.
 ![SAMADhi objects and links](https://raw.githubusercontent.com/cp3-llbb/SAMADhi/master/documentation/SAMADhi_dblayout.png)
 
 - produce some plots:
