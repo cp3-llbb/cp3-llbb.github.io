@@ -78,6 +78,7 @@ root -l -b -q generate_files.C
 | blinded-range-fill-style | fill style |  | `1001` |
 | y-axis-format | formatted string | Arg. 1: plot's y-axis title; Arg. 2: plot's first bin's width | `%1% / %2$.2f` |
 | ratio-y-axis | string | Y axis title of the ratio plot | `Data / MC` |
+| ratio-style | string | Draw option for the ratio histogram | `P0` |
 | mode | string | `tree` (fill TH1s from a tree on-the-fly) or `hist` (retrieve TH1s from files) | `hist` |
 | tree-name | string | Name of the TTree used to fill the histograms in `tree` mode |  |
 | labels | Label | Extra labels' configurations (see below). | |
