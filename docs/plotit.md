@@ -25,6 +25,16 @@ cd ..
 make -j 4
 ```
 
+Outside CMSSW and with a recent version of ROOT, plotIt can als be built with CMake (and an install prefix passed with `-DCMAKE_INSTALL_PREFIX`, or the exectuble copied from the build directory to install), e.g.
+```bash
+git clone -o upstream https://github.com/cp3-llbb/plotIt.git
+mkdir plotit-build
+cd plotit-build
+cmake ../plotIt
+make -j2
+cd -
+```
+
 ## Test run (command line)
 
 ```bash
@@ -37,6 +47,22 @@ root -l -b -q generate_files.C
 ./../plotIt -o plots/ example.yml
 # Go to the plots directory to observe the beautiful plots
 ```
+
+### Optional command-line arguments
+
+The command above is the minimal way to run plotIt: with a configuration file and output directory.
+There are also a number of optional arguments that change the behaviour:
+
+- ``-h``: print help for the command-line interface and exit
+- ``-v``: verbose output, will print more progress messages, a summary, and the LaTeX yields table (if ``-y`` is also specified) to stdout
+- ``-b``: print systematics details for each MC process in the summary
+- ``-o``: output directory
+- ``-i``: input directory (file names are taken relative to this directory, default is the current directory)
+- ``-y``: produce a yields table (written to ``<output>/yields.tex``)
+- ``-p``: do not produce the plots
+- ``--ignore-scales``: ignore (global and per-file) ``scale`` parameters for the normalisation
+- ``-e``: pass one era to make plots for (otherwise combined plots, summing over all eras specified in the configuration, are made)
+- ``-u``: unblind, i.e. ignore any blinded-range in the configuration
 
 ## Configuration file reference
 
@@ -57,7 +83,8 @@ root -l -b -q generate_files.C
 | extra-label | string | Additional text above the plot |  |
 | root | string | Path to the folder where the files are located | `./` |
 | scale | number | Global scaling of all non-data entries | `1` |
-| **luminosity** | number | Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label. |  |
+| eras | list of strings | List of data-taking periods to combine | `[""]` |
+| **luminosity** | number or map | Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label. When using eras: map of `{ era : luminosity }` |  |
 | luminosity-error | number | Fractional uncertainty on the integrated luminosity. Used for the yields table (uncertainty on MC and data/MC ratio) and the plot's MC & ratio syst. error bands. | `0` |
 | luminosity-label | string | Luminosity label appearing above the plot. In the string, `%lumi%` gets replaced by the integrated luminosity in fb. |  |
 | error-fill-color | color | | `42` |
@@ -78,6 +105,7 @@ root -l -b -q generate_files.C
 | blinded-range-fill-style | fill style |  | `1001` |
 | y-axis-format | formatted string | Arg. 1: plot's y-axis title; Arg. 2: plot's first bin's width | `%1% / %2$.2f` |
 | ratio-y-axis | string | Y axis title of the ratio plot | `Data / MC` |
+| ratio-style | string | Draw option for the ratio histogram | `P0` |
 | mode | string | `tree` (fill TH1s from a tree on-the-fly) or `hist` (retrieve TH1s from files) | `hist` |
 | tree-name | string | Name of the TTree used to fill the histograms in `tree` mode |  |
 | labels | Label | Extra labels' configurations (see below). | |
@@ -159,7 +187,8 @@ root -l -b -q generate_files.C
 
 ### Files configuration ('files')
 
-Each MC contribution is scaled by `plotIt.scale*plotIt.luminosity*scale*cross-section*branching-ratio/generated-events`.
+Each MC contribution is scaled by `plotIt.scale*<luminosity>*scale*cross-section*branching-ratio/generated-events`,
+where `<luminosity>` is the luminosity for the `era` of the file, or the total luminosity if no `era` is specified.
 
 | Field | Type | Action | Default |
 | ----- | ---- | ------ |---------|
@@ -168,6 +197,7 @@ Each MC contribution is scaled by `plotIt.scale*plotIt.luminosity*scale*cross-se
 | cross-section | number | Cross-section of the process | `1` |
 | branching-ratio | number | Branching ratio of the process | `1` |
 | generated-events | number | Careful! Sum of generated event weights! Can be different from the number of generated events. | `1` |
+| era | string | era (used to select the corresponding integrated luminosity value for normalisation of MC, when using eras) |  |
 | order | number | Order in which the histograms are stacked (concerns MC only). Small=low. | |
 | legend | string | Name of the file in the legend, unless `group` is defined . | |
 | group | Group | Refers to a legend group (see below) | |
@@ -192,6 +222,48 @@ Each MC contribution is scaled by `plotIt.scale*plotIt.luminosity*scale*cross-se
 #### Legend ('legend')
 
 #### Systematics configuration ('systematics')
+
+Different types of systematic uncertainties are supported: shape, log-normal and constant.
+
+Each shape uncertainty requires an up and down variated histogram. They are retrieved using its name, specified in the yml file as:
+
+```yml
+systematics:
+  - <systematic>
+```
+Or, equivalently:
+```yml
+systematics:
+  - <systematic>:
+     type: shape
+```
+Based on this, plotIt will either look for two histograms called `<nominal>__<systematic>[up|down]`, where `<nominal>` is the nominal histogram, in the file containing all the nominal histograms, or look for histograms called `<nominal>` in two files called `<nominalFile>__<systematic>[up|down].root` (where `<nominalFile>` is the file containing the nominal histograms for that process).
+
+A constant systematic is just a rate uncertainty, which can specified either as:
+```yml
+systematics:
+  - <systematic>: <value>
+```
+or as:
+```yml
+systematics:
+  - <systematic>:
+     type: const
+     value: <value>
+```
+where `<value>` is the value with which the nominal histogram should be scaled up and down (by `<value>` and `2-<value>`): e.g. with `1.025`, the histograms are scaled by `1.025` and `0.975`, i.e. by +/- 2.5%.
+
+Any kind of systematics can be restricted to a subset of files by means of a regular expression:
+```yml
+systematics:
+  - <systematic>:
+     type: shape
+     on: 'ttbar'
+```
+will only apply the `<systematic>` on files containing `ttbar`.
+
+When plotting, all uncertainties will be added in quadrature, assuming zero correlations between all of them.
+
 
 #### Additional labels ('labels')
 
