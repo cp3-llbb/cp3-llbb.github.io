@@ -193,6 +193,48 @@ Each MC contribution is scaled by `plotIt.scale*plotIt.luminosity*scale*cross-se
 
 #### Systematics configuration ('systematics')
 
+Different types of systematic uncertainties are supported: shape, log-normal and constant.
+
+Each shape uncertainty requires an up and down variated histogram. They are retrieved using its name, specified in the yml file as:
+
+```yml
+systematics:
+  - <systematic>
+```
+Or, equivalently:
+```yml
+systematics:
+  - <systematic>:
+     type: shape
+```
+Based on this, plotIt will either look for two histograms called `<nominal>__<systematic>[up|down]`, where `<nominal>` is the nominal histogram, in the file containing all the nominal histograms, or look for histograms called `<nominal>` in two files called `<nominalFile>__<systematic>[up|down].root` (where `<nominalFile>` is the file containing the nominal histograms for that process).
+
+A constant systematic is just a rate uncertainty, which can specified either as:
+```yml
+systematics:
+  - <systematic>: <value>
+```
+or as:
+```yml
+systematics:
+  - <systematic>:
+     type: const
+     value: <value>
+```
+where `<value>` is the value with which the nominal histogram should be scaled up and down (by `<value>` and `2-<value>`): e.g. with `1.025`, the histograms are scaled by `1.025` and `0.975`, i.e. by +/- 2.5%.
+
+Any kind of systematics can be restricted to a subset of files by means of a regular expression:
+```yml
+systematics:
+  - <systematic>:
+     type: shape
+     on: 'ttbar'
+```
+will only apply the `<systematic>` on files containing `ttbar`.
+
+When plotting, all uncertainties will be added in quadrature, assuming zero correlations between all of them.
+
+
 #### Additional labels ('labels')
 
 Each plot can be assigned a set of labels. A label is a custom string which can be positioned anywhere on the canvas. You can defined labels as follow:
