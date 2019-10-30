@@ -30,7 +30,7 @@ Outside CMSSW and with a recent version of ROOT, plotIt can als be built with CM
 git clone -o upstream https://github.com/cp3-llbb/plotIt.git
 mkdir plotit-build
 cd plotit-build
-cmake ../plotit
+cmake ../plotIt
 make -j2
 cd -
 ```
