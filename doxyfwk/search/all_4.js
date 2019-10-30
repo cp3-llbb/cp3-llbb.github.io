@@ -3,7 +3,7 @@ var searchData=
   ['electronsproducer',['ElectronsProducer',['../classElectronsProducer.html',1,'']]],
   ['elelcategory',['ElElCategory',['../classFramework_1_1ElElCategory.html',1,'Framework']]],
   ['elmucategory',['ElMuCategory',['../classFramework_1_1ElMuCategory.html',1,'Framework']]],
-  ['endjob',['endJob',['../classEventProducer.html#a4e87250a4f2b7b771182bca3c558d71a',1,'EventProducer::endJob()'],['../classFramework_1_1Producer.html#a75649715615b313fb7a341ce494004df',1,'Framework::Producer::endJob()']]],
+  ['endjob',['endJob',['../classFramework_1_1Producer.html#a75649715615b313fb7a341ce494004df',1,'Framework::Producer']]],
   ['endluminosityblock',['endLuminosityBlock',['../classFramework_1_1Producer.html#a34da1c336b60ce8a35e1d05122abdce3',1,'Framework::Producer']]],
   ['endrun',['endRun',['../classFramework_1_1Producer.html#ad1e31e8dad40ab5367f17e43f4792b0d',1,'Framework::Producer']]],
   ['endswith',['EndsWith',['../structCatch_1_1Matchers_1_1Impl_1_1StdString_1_1EndsWith.html',1,'Catch::Matchers::Impl::StdString']]],

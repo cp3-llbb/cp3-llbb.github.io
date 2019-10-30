@@ -1,6 +1,7 @@
 var searchData=
 [
   ['tagalias',['TagAlias',['../structCatch_1_1TagAlias.html',1,'Catch']]],
+  ['tausproducer',['TausProducer',['../classTausProducer.html',1,'']]],
   ['testanalyzer',['TestAnalyzer',['../classTestAnalyzer.html',1,'']]],
   ['testcase',['TestCase',['../classCatch_1_1TestCase.html',1,'Catch']]],
   ['testcaseinfo',['TestCaseInfo',['../structCatch_1_1TestCaseInfo.html',1,'Catch']]],

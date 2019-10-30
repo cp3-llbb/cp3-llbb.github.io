@@ -4,6 +4,7 @@ var searchData=
   ['candidatesproducer_3c_20pat_3a_3aelectron_20_3e',['CandidatesProducer&lt; pat::Electron &gt;',['../classCandidatesProducer.html',1,'']]],
   ['candidatesproducer_3c_20pat_3a_3ajet_20_3e',['CandidatesProducer&lt; pat::Jet &gt;',['../classCandidatesProducer.html',1,'']]],
   ['candidatesproducer_3c_20pat_3a_3amuon_20_3e',['CandidatesProducer&lt; pat::Muon &gt;',['../classCandidatesProducer.html',1,'']]],
+  ['candidatesproducer_3c_20pat_3a_3atau_20_3e',['CandidatesProducer&lt; pat::Tau &gt;',['../classCandidatesProducer.html',1,'']]],
   ['candidatesproducer_3c_20t_20_3e',['CandidatesProducer&lt; T &gt;',['../classCandidatesProducer.html',1,'']]],
   ['casedstring',['CasedString',['../structCatch_1_1Matchers_1_1Impl_1_1StdString_1_1CasedString.html',1,'Catch::Matchers::Impl::StdString']]],
   ['casesensitive',['CaseSensitive',['../structCatch_1_1CaseSensitive.html',1,'Catch']]],
