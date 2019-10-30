@@ -3,4 +3,4 @@ mkdocs-material
 Pygments
 pymdown-extensions
 mkdocs-markdownextradata-plugin
-git+https://github.com/pieterdavid/mkdocs-doxygen-plugin.git
+git+https://github.com/pieterdavid/mkdocs-doxygen-plugin.git#egg=mkdocs-doxygen-plugin
