@@ -57,7 +57,8 @@ root -l -b -q generate_files.C
 | extra-label | string | Additional text above the plot |  |
 | root | string | Path to the folder where the files are located | `./` |
 | scale | number | Global scaling of all non-data entries | `1` |
-| **luminosity** | number | Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label. |  |
+| eras | list of strings | List of data-taking periods to combine | `[""]` |
+| **luminosity** | number or map | Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label. When using eras: map of `{ era : luminosity }` |  |
 | luminosity-error | number | Fractional uncertainty on the integrated luminosity. Used for the yields table (uncertainty on MC and data/MC ratio) and the plot's MC & ratio syst. error bands. | `0` |
 | luminosity-label | string | Luminosity label appearing above the plot. In the string, `%lumi%` gets replaced by the integrated luminosity in fb. |  |
 | error-fill-color | color | | `42` |
@@ -169,6 +170,7 @@ Each MC contribution is scaled by `plotIt.scale*plotIt.luminosity*scale*cross-se
 | cross-section | number | Cross-section of the process | `1` |
 | branching-ratio | number | Branching ratio of the process | `1` |
 | generated-events | number | Careful! Sum of generated event weights! Can be different from the number of generated events. | `1` |
+| era | string | era (used to select the corresponding integrated luminosity value for normalisation of MC, when using eras) |  |
 | order | number | Order in which the histograms are stacked (concerns MC only). Small=low. | |
 | legend | string | Name of the file in the legend, unless `group` is defined . | |
 | group | Group | Refers to a legend group (see below) | |
