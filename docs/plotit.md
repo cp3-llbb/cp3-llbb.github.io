@@ -177,7 +177,8 @@ There are also a number of optional arguments that change the behaviour:
 
 ### Files configuration ('files')
 
-Each MC contribution is scaled by `plotIt.scale*plotIt.luminosity*scale*cross-section*branching-ratio/generated-events`.
+Each MC contribution is scaled by `plotIt.scale*<luminosity>*scale*cross-section*branching-ratio/generated-events`,
+where `<luminosity>` is the luminosity for the `era` of the file, or the total luminosity if no `era` is specified.
 
 | Field | Type | Action | Default |
 | ----- | ---- | ------ |---------|
