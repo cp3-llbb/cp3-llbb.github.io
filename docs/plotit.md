@@ -25,6 +25,16 @@ cd ..
 make -j 4
 ```
 
+Outside CMSSW and with a recent version of ROOT, plotIt can als be built with CMake (and an install prefix passed with `-DCMAKE_INSTALL_PREFIX`, or the exectuble copied from the build directory to install), e.g.
+```bash
+git clone -o upstream https://github.com/cp3-llbb/plotIt.git
+mkdir plotit-build
+cd plotit-build
+cmake ../plotit
+make -j2
+cd -
+```
+
 ## Test run (command line)
 
 ```bash
