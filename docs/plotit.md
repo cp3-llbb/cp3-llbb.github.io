@@ -38,6 +38,22 @@ root -l -b -q generate_files.C
 # Go to the plots directory to observe the beautiful plots
 ```
 
+### Optional command-line arguments
+
+The command above is the minimal way to run plotIt: with a configuration file and output directory.
+There are also a number of optional arguments that change the behaviour:
+
+- ``-h``: print help for the command-line interface and exit
+- ``-v``: verbose output, will print more progress messages, a summary, and the LaTeX yields table (if ``-y`` is also specified) to stdout
+- ``-b``: print systematics details for each MC process in the summary
+- ``-o``: output directory
+- ``-i``: input directory (file names are taken relative to this directory, default is the current directory)
+- ``-y``: produce a yields table (written to ``<output>/yields.tex``)
+- ``-p``: do not produce the plots
+- ``--ignore-scales``: ignore (global and per-file) ``scale`` parameters for the normalisation
+- ``-e``: pass one era to make plots for (otherwise combined plots, summing over all eras specified in the configuration, are made)
+- ``-u``: unblind, i.e. ignore any blinded-range in the configuration
+
 ## Configuration file reference
 
 - `Point`s and `Range`s are lists of two numbers: `[x,y]`
