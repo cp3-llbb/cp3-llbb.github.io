@@ -355,24 +355,28 @@ The `rename` option expect a **list** of operation. Renaming operations are appl
 
 #### Line styles
 
-![line styles from ROOT](https://root.cern.ch/root/html/MACRO_TAttLine_5.gif)
+![line styles from ROOT](https://root.cern.ch/doc/master/pict1_TAttLine_003.png)
 
 #### Line widths
 
-![line widths from ROOT](https://root.cern.ch/root/html/MACRO_TAttLine_3.gif)
+![line widths from ROOT](https://root.cern.ch/doc/master/pict1_TAttLine_002.png)
 
 #### Fill styles
 
-![fill styles from ROOT](https://root.cern.ch/root/html/MACRO_TAttFill_5.gif)
+![fill styles from ROOT](https://root.cern.ch/doc/master/pict1_TAttFill_003.png)
 
 #### Marker styles
 
-![marker styles from ROOT](https://root.cern.ch/root/html/MACRO_TAttMarker_3.gif)
+![marker styles from ROOT (1)](https://root.cern.ch/doc/master/pict1_TAttMarker_002.png)
+
+![marker styles from ROOT (2)](https://root.cern.ch/doc/master/pict1_TAttMarker_003.png)
 
 #### Colors
 
 ROOT basic colors
 
-![basic colors from ROOT](https://root.cern.ch/root/html/MACRO_TColor_1.gif)
+![basic colors from ROOT](https://root.cern.ch/doc/master/pict1_TColor_001.png)
+
+![Full TColor wheel](https://root.cern.ch/doc/master/pict1_TColor_002.png)
 
 ![hexadecimal (alpha)RGB overview](http://www.lug.or.kr/files/cheat_sheet/rgb-hex-cheat-sheet-v1.png)
