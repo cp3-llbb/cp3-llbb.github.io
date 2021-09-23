@@ -47,8 +47,8 @@ theme:
 
 extra:
   social:
-    - type: 'github'
-      link: 'https://github.com/cp3-llbb'
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/cp3-llbb
   framework:
     cmsswrelease: CMSSW_8_0_30
     defaultbranch: CMSSW_8_0_6p
