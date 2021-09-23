@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['unsignedattribute',['UnsignedAttribute',['../classtinyxml2_1_1XMLElement.html#aa5a41367b5118acec42a87f5f94cec2d',1,'tinyxml2::XMLElement']]],
-  ['unsignedvalue',['UnsignedValue',['../classtinyxml2_1_1XMLAttribute.html#a4c7a179907836a136d1ce5acbe53389d',1,'tinyxml2::XMLAttribute']]]
+  ['unsignedattribute_606',['UnsignedAttribute',['../classtinyxml2_1_1XMLElement.html#a2a1daf6b090f53f5d34bcc71c646ea78',1,'tinyxml2::XMLElement']]],
+  ['unsignedvalue_607',['UnsignedValue',['../classtinyxml2_1_1XMLAttribute.html#a0be5343b08a957c42c02c5d32c35d338',1,'tinyxml2::XMLAttribute']]]
 ];

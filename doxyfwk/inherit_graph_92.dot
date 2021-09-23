@@ -1,13 +1,8 @@
 digraph "Graphical Class Hierarchy"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="Histogram\< T, _Bin \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHistogram.html"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="OneDimensionHistogram\l\< T, _Bin \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOneDimensionHistogram.html"];
-  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="ThreeDimensionsHistogram\l\< T, _Bin \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classThreeDimensionsHistogram.html"];
-  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TwoDimensionsHistogram\l\< T, _Bin \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTwoDimensionsHistogram.html"];
+  Node0 [label="Framework::GenInfoAndWeights",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structFramework_1_1GenInfoAndWeights.html",tooltip=" "];
 }

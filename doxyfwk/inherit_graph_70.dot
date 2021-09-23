@@ -1,7 +1,8 @@
 digraph "Graphical Class Hierarchy"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="Catch::StringMaker\l\< R C::* \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1StringMaker_3_01R_01C_1_1_5_01_4.html"];
+  Node0 [label="Catch::SourceLineInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1SourceLineInfo.html",tooltip=" "];
 }

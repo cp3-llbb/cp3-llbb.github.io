@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weightedbinnedvalues',['WeightedBinnedValues',['../classWeightedBinnedValues.html',1,'']]]
+  ['weightedbinnedvalues_489',['WeightedBinnedValues',['../classWeightedBinnedValues.html',1,'']]]
 ];
