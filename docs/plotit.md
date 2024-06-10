@@ -135,6 +135,7 @@ There are also a number of optional arguments that change the behaviour:
 | y-axis | string | y-axis title | `Events` |
 | y-axis-format | formatted string | Overrides plotIt option. | |
 | normalized | bool | Normalize data/each signal/total MC to 1. | `false` |
+| normalizedByBinWidth| bool | The bin contents and errors are divided by the bin width. | `false` |
 | no-data | bool | Do not plot data. | `false` |
 | override | bool | If any plot has this field set to true, only plots which do will be produced. | `false` |
 | log-y | bool | Log-scale on y-axis. Special value: `Both`. | `false` |
