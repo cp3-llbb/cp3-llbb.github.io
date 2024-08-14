@@ -40,15 +40,9 @@ plugins:
 
 # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
 theme:
-  name: material
+  name: 'material'
   language: 'en'
   palette:
-    - scheme: default
-      primary: deep purple
-      accent: deep purple
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
     - scheme: slate
       primary: 'indigo'
       accent: 'indigo' 
