@@ -42,10 +42,10 @@ plugins:
 theme:
   name: 'material'
   language: 'en'
-    palette:
+  palette:
     - scheme: default
       primary: 'indigo'
-      accent: d'indigo'
+      accent: 'indigo'
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
