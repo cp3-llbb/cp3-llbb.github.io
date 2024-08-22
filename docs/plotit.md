@@ -133,9 +133,9 @@ There are also a number of optional arguments that change the behaviour:
 | exclude | string | Regexp allowing to exlude histograms present in the files whose name matches the plot's name |  |
 | x-axis | string | x-axis title | |
 | y-axis | string | y-axis title | `Events` |
-| y-axis-format | formatted string | Overrides plotIt option. | |
+| y-axis-format | formatted string | Overrides plotIt option. | %1% |
 | normalized | bool | Normalize data/each signal/total MC to 1. | `false` |
-| normalizedByBinWidth| bool | The bin contents and errors are divided by the bin width. | `false` |
+| normalizedByBinWidth | bool | The bin contents and errors are divided by the bin width. | `false` |
 | no-data | bool | Do not plot data. | `false` |
 | override | bool | If any plot has this field set to true, only plots which do will be produced. | `false` |
 | log-y | bool | Log-scale on y-axis. Special value: `Both`. | `false` |

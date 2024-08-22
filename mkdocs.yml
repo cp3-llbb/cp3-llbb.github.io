@@ -14,6 +14,7 @@ nav:
     - Doxygen: doxyfwk/index.html
   - GridIn: gridin.md
   - plotIt: plotit.md
+  - Bamboo: bamboo.md
 
 # Extensions
 markdown_extensions:
@@ -27,6 +28,9 @@ markdown_extensions:
 
 plugins:
   - markdownextradata
+  - search
+  #  - git-revision-date-localized:
+  #  enable_creation_date: true
   - doxygen:
       tryclone: true
       packages:
@@ -34,16 +38,36 @@ plugins:
             url    : https://github.com/cp3-llbb/Framework.git
             config : docs/doxygen.cfg
 
-# Theming
+# https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
 theme:
   name: 'material'
   language: 'en'
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    - scheme: default
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  features:
+    - header.autohide
+    - navigation.footer
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
 
 extra:
   social:
