@@ -7,7 +7,7 @@ digraph "MuonsProducer"
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="LeptonsProducer\< pat\l::Muon \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLeptonsProducer.html",tooltip=" "];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="CandidatesProducer\l\< pat::Muon \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCandidatesProducer.html",tooltip=" "];
+  Node3 [label="CandidatesProducer\l\< ObjectType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCandidatesProducer.html",tooltip=" "];
   Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="Framework::Producer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFramework_1_1Producer.html",tooltip="Base class for Framework producers."];
   Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

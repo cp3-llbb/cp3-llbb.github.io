@@ -9,7 +9,7 @@ var searchData=
   ['newunknown_168',['NewUnknown',['../classtinyxml2_1_1XMLDocument.html#a4954f502c5fd7f49de54c3c0c99bb73d',1,'tinyxml2::XMLDocument']]],
   ['next_169',['Next',['../classtinyxml2_1_1XMLAttribute.html#aee53571b21e7ce5421eb929523a8bbe6',1,'tinyxml2::XMLAttribute']]],
   ['nextsibling_170',['NextSibling',['../classtinyxml2_1_1XMLNode.html#a79db9ef0fe014d27790f2218b87bcbb5',1,'tinyxml2::XMLNode::NextSibling()'],['../classtinyxml2_1_1XMLHandle.html#aad2eccc7c7c7b18145877c978c3850b5',1,'tinyxml2::XMLHandle::NextSibling()']]],
-  ['nextsiblingelement_171',['NextSiblingElement',['../classtinyxml2_1_1XMLNode.html#a14ea560df31110ff07a9f566171bf797',1,'tinyxml2::XMLNode::NextSiblingElement()'],['../classtinyxml2_1_1XMLHandle.html#ae41d88ee061f3c49a081630ff753b2c5',1,'tinyxml2::XMLHandle::NextSiblingElement()']]],
+  ['nextsiblingelement_171',['NextSiblingElement',['../classtinyxml2_1_1XMLHandle.html#ae41d88ee061f3c49a081630ff753b2c5',1,'tinyxml2::XMLHandle::NextSiblingElement()'],['../classtinyxml2_1_1XMLNode.html#a14ea560df31110ff07a9f566171bf797',1,'tinyxml2::XMLNode::NextSiblingElement(const char *name=0) const']]],
   ['nochildren_172',['NoChildren',['../classtinyxml2_1_1XMLNode.html#ac3ab489e6e202a3cd1762d3b332e89d4',1,'tinyxml2::XMLNode']]],
   ['noncopyable_173',['NonCopyable',['../classCatch_1_1NonCopyable.html',1,'Catch']]],
   ['not_174',['Not',['../classCatch_1_1Matchers_1_1Impl_1_1Generic_1_1Not.html',1,'Catch::Matchers::Impl::Generic']]],

@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Framework::PUReweighter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFramework_1_1PUReweighter.html",tooltip=" "];
+  Node0 [label="Histogram\< T, _Bin \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHistogram.html",tooltip=" "];
 }

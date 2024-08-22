@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Catch::AssertionInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1AssertionInfo.html",tooltip=" "];
+  Node0 [label="BinnedValuesJSONParser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBinnedValuesJSONParser.html",tooltip=" "];
 }

@@ -9,14 +9,20 @@
         <meta name="description" content="Documentation for the CP3-llbb Analysis Tools">
       
       
-      
         <meta name="author" content="IRMP/CP3, Université catholique de Louvain">
       
       
         <link rel="canonical" href="https://cp3-llbb.github.io/plotit/">
       
+      
+        <link rel="prev" href="../gridin/">
+      
+      
+        <link rel="next" href="../bamboo/">
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
     
     
       
@@ -24,32 +30,33 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
-    
+      
+
+
     
     
       
+    
+    
+      
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-
+    
     
     
   </head>
@@ -57,13 +64,13 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -80,18 +87,22 @@
       
     </div>
     
+    
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="CP3-llbb Analysis Tools" class="md-header__button md-logo" aria-label="CP3-llbb Analysis Tools" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -110,15 +121,87 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/cp3-llbb/cp3-llbb.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/cp3-llbb/cp3-llbb.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     cp3-llbb/cp3-llbb.github.io
@@ -148,23 +231,23 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="CP3-llbb Analysis Tools" class="md-nav__button md-logo" aria-label="CP3-llbb Analysis Tools" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     CP3-llbb Analysis Tools
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/cp3-llbb/cp3-llbb.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/cp3-llbb/cp3-llbb.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     cp3-llbb/cp3-llbb.github.io
@@ -176,14 +259,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Introduction
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
       </a>
     </li>
   
@@ -191,90 +279,124 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Framework
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Framework" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Framework
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Framework
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../framework/" class="md-nav__link">
-        Overview
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../fwk_jenkins/" class="md-nav__link">
-        Jenkins CI
+        
+  
+  <span class="md-ellipsis">
+    Jenkins CI
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../doxyfwk/index.html" class="md-nav__link">
-        Doxygen
+        
+  
+  <span class="md-ellipsis">
+    Doxygen
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../gridin/" class="md-nav__link">
-        GridIn
+        
+  
+  <span class="md-ellipsis">
+    GridIn
+  </span>
+  
+
       </a>
     </li>
   
@@ -282,31 +404,43 @@
     
       
       
-      
-
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          plotIt
+          
+  
+  <span class="md-ellipsis">
+    plotIt
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        plotIt
+        
+  
+  <span class="md-ellipsis">
+    plotIt
+  </span>
+  
+
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -322,14 +456,18 @@
       
         <li class="md-nav__item">
   <a href="#first-time-setup-instructions" class="md-nav__link">
-    First time setup instructions
+    <span class="md-ellipsis">
+      First time setup instructions
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#test-run-command-line" class="md-nav__link">
-    Test run (command line)
+    <span class="md-ellipsis">
+      Test run (command line)
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Test run (command line)">
@@ -337,7 +475,9 @@
         
           <li class="md-nav__item">
   <a href="#optional-command-line-arguments" class="md-nav__link">
-    Optional command-line arguments
+    <span class="md-ellipsis">
+      Optional command-line arguments
+    </span>
   </a>
   
 </li>
@@ -349,7 +489,9 @@
       
         <li class="md-nav__item">
   <a href="#configuration-file-reference" class="md-nav__link">
-    Configuration file reference
+    <span class="md-ellipsis">
+      Configuration file reference
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Configuration file reference">
@@ -357,28 +499,36 @@
         
           <li class="md-nav__item">
   <a href="#plotit-general-configuration" class="md-nav__link">
-    plotIt general ('configuration')
+    <span class="md-ellipsis">
+      plotIt general ('configuration')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#plots-configuration-plots" class="md-nav__link">
-    Plots configuration ('plots')
+    <span class="md-ellipsis">
+      Plots configuration ('plots')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#files-configuration-files" class="md-nav__link">
-    Files configuration ('files')
+    <span class="md-ellipsis">
+      Files configuration ('files')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#additional-fields" class="md-nav__link">
-    Additional fields
+    <span class="md-ellipsis">
+      Additional fields
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Additional fields">
@@ -386,42 +536,54 @@
         
           <li class="md-nav__item">
   <a href="#groups-groups" class="md-nav__link">
-    Groups ('groups')
+    <span class="md-ellipsis">
+      Groups ('groups')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#legend-legend" class="md-nav__link">
-    Legend ('legend')
+    <span class="md-ellipsis">
+      Legend ('legend')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#systematics-configuration-systematics" class="md-nav__link">
-    Systematics configuration ('systematics')
+    <span class="md-ellipsis">
+      Systematics configuration ('systematics')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#additional-labels-labels" class="md-nav__link">
-    Additional labels ('labels')
+    <span class="md-ellipsis">
+      Additional labels ('labels')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#lines" class="md-nav__link">
-    Lines
+    <span class="md-ellipsis">
+      Lines
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renaming-operations" class="md-nav__link">
-    Renaming operations
+    <span class="md-ellipsis">
+      Renaming operations
+    </span>
   </a>
   
 </li>
@@ -433,7 +595,9 @@
         
           <li class="md-nav__item">
   <a href="#parameters-cheatsheets" class="md-nav__link">
-    Parameters cheatsheets
+    <span class="md-ellipsis">
+      Parameters cheatsheets
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Parameters cheatsheets">
@@ -441,35 +605,45 @@
         
           <li class="md-nav__item">
   <a href="#line-styles" class="md-nav__link">
-    Line styles
+    <span class="md-ellipsis">
+      Line styles
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#line-widths" class="md-nav__link">
-    Line widths
+    <span class="md-ellipsis">
+      Line widths
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#fill-styles" class="md-nav__link">
-    Fill styles
+    <span class="md-ellipsis">
+      Fill styles
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#marker-styles" class="md-nav__link">
-    Marker styles
+    <span class="md-ellipsis">
+      Marker styles
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#colors" class="md-nav__link">
-    Colors
+    <span class="md-ellipsis">
+      Colors
+    </span>
   </a>
   
 </li>
@@ -488,6 +662,26 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bamboo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bamboo
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -504,6 +698,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -519,14 +714,18 @@
       
         <li class="md-nav__item">
   <a href="#first-time-setup-instructions" class="md-nav__link">
-    First time setup instructions
+    <span class="md-ellipsis">
+      First time setup instructions
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#test-run-command-line" class="md-nav__link">
-    Test run (command line)
+    <span class="md-ellipsis">
+      Test run (command line)
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Test run (command line)">
@@ -534,7 +733,9 @@
         
           <li class="md-nav__item">
   <a href="#optional-command-line-arguments" class="md-nav__link">
-    Optional command-line arguments
+    <span class="md-ellipsis">
+      Optional command-line arguments
+    </span>
   </a>
   
 </li>
@@ -546,7 +747,9 @@
       
         <li class="md-nav__item">
   <a href="#configuration-file-reference" class="md-nav__link">
-    Configuration file reference
+    <span class="md-ellipsis">
+      Configuration file reference
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Configuration file reference">
@@ -554,28 +757,36 @@
         
           <li class="md-nav__item">
   <a href="#plotit-general-configuration" class="md-nav__link">
-    plotIt general ('configuration')
+    <span class="md-ellipsis">
+      plotIt general ('configuration')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#plots-configuration-plots" class="md-nav__link">
-    Plots configuration ('plots')
+    <span class="md-ellipsis">
+      Plots configuration ('plots')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#files-configuration-files" class="md-nav__link">
-    Files configuration ('files')
+    <span class="md-ellipsis">
+      Files configuration ('files')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#additional-fields" class="md-nav__link">
-    Additional fields
+    <span class="md-ellipsis">
+      Additional fields
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Additional fields">
@@ -583,42 +794,54 @@
         
           <li class="md-nav__item">
   <a href="#groups-groups" class="md-nav__link">
-    Groups ('groups')
+    <span class="md-ellipsis">
+      Groups ('groups')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#legend-legend" class="md-nav__link">
-    Legend ('legend')
+    <span class="md-ellipsis">
+      Legend ('legend')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#systematics-configuration-systematics" class="md-nav__link">
-    Systematics configuration ('systematics')
+    <span class="md-ellipsis">
+      Systematics configuration ('systematics')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#additional-labels-labels" class="md-nav__link">
-    Additional labels ('labels')
+    <span class="md-ellipsis">
+      Additional labels ('labels')
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#lines" class="md-nav__link">
-    Lines
+    <span class="md-ellipsis">
+      Lines
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renaming-operations" class="md-nav__link">
-    Renaming operations
+    <span class="md-ellipsis">
+      Renaming operations
+    </span>
   </a>
   
 </li>
@@ -630,7 +853,9 @@
         
           <li class="md-nav__item">
   <a href="#parameters-cheatsheets" class="md-nav__link">
-    Parameters cheatsheets
+    <span class="md-ellipsis">
+      Parameters cheatsheets
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Parameters cheatsheets">
@@ -638,35 +863,45 @@
         
           <li class="md-nav__item">
   <a href="#line-styles" class="md-nav__link">
-    Line styles
+    <span class="md-ellipsis">
+      Line styles
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#line-widths" class="md-nav__link">
-    Line widths
+    <span class="md-ellipsis">
+      Line widths
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#fill-styles" class="md-nav__link">
-    Fill styles
+    <span class="md-ellipsis">
+      Fill styles
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#marker-styles" class="md-nav__link">
-    Marker styles
+    <span class="md-ellipsis">
+      Marker styles
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#colors" class="md-nav__link">
-    Colors
+    <span class="md-ellipsis">
+      Colors
+    </span>
   </a>
   
 </li>
@@ -689,55 +924,69 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <a href="https://github.com/cp3-llbb/cp3-llbb.github.io/edit/master/docs/plotit.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="plotit">plotIt<a class="headerlink" href="#plotit" title="Permanent link">&para;</a></h1>
+                  
+
+  
+    <a href="https://github.com/cp3-llbb/cp3-llbb.github.io/edit/master/docs/plotit.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/cp3-llbb/cp3-llbb.github.io/raw/master/docs/plotit.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="plotit">plotIt<a class="headerlink" href="#plotit" title="Permanent link">&para;</a></h1>
 <p>plotIt is a utility to plot ROOT histogram stacks. The input files corresponding to the different contributions and the histograms to fit are configured through a yaml file.</p>
 <h2 id="first-time-setup-instructions">First time setup instructions<a class="headerlink" href="#first-time-setup-instructions" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span>git clone -o upstream https://github.com/cp3-llbb/plotIt.git <span class="c1"># inside $CMSSW_BASE/src/cp3_llbb</span>
-<span class="nb">cd</span> plotIt/
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>-o<span class="w"> </span>upstream<span class="w"> </span>https://github.com/cp3-llbb/plotIt.git<span class="w"> </span><span class="c1"># inside $CMSSW_BASE/src/cp3_llbb</span>
+<span class="nb">cd</span><span class="w"> </span>plotIt/
 
 <span class="c1"># Initialize the git remotes</span>
-<span class="nb">source</span> firstsetup.sh 
+<span class="nb">source</span><span class="w"> </span>firstsetup.sh<span class="w"> </span>
 <span class="c1"># Within-CMSSW and on ingrid specific install</span>
-cms_env <span class="c1"># specific to ingrid, aka &#39;module purge; module load grid/grid_environment_sl6; module load crab/crab3; module load cms/cmssw;&#39;</span>
+cms_env<span class="w"> </span><span class="c1"># specific to ingrid, aka &#39;module purge; module load grid/grid_environment_sl6; module load crab/crab3; module load cms/cmssw;&#39;</span>
 cmsenv
-<span class="nb">source</span> setup_for_cms_env.sh
+<span class="nb">source</span><span class="w"> </span>setup_for_cms_env.sh
 <span class="c1"># For a non-CMSSW and non-ingrid install (beware there is no cmsenv at all in this case):</span>
 <span class="c1"># source setup_sl6_env.sh</span>
 
 <span class="c1"># Build externals</span>
-<span class="nb">cd</span> external
+<span class="nb">cd</span><span class="w"> </span>external
 ./build-external.sh
 <span class="c1"># Build the executable itself</span>
-<span class="nb">cd</span> ..
-make -j <span class="m">4</span>
-</pre></div>
+<span class="nb">cd</span><span class="w"> </span>..
+make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
+</code></pre></div>
 <p>Outside CMSSW and with a recent version of ROOT, plotIt can als be built with CMake (and an install prefix passed with <code>-DCMAKE_INSTALL_PREFIX</code>, or the exectuble copied from the build directory to install), e.g.
-<div class="highlight"><pre><span></span>git clone -o upstream https://github.com/cp3-llbb/plotIt.git
-mkdir plotit-build
-<span class="nb">cd</span> plotit-build
-cmake ../plotIt
-make -j2
-<span class="nb">cd</span> -
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>-o<span class="w"> </span>upstream<span class="w"> </span>https://github.com/cp3-llbb/plotIt.git
+mkdir<span class="w"> </span>plotit-build
+<span class="nb">cd</span><span class="w"> </span>plotit-build
+cmake<span class="w"> </span>../plotIt
+make<span class="w"> </span>-j2
+<span class="nb">cd</span><span class="w"> </span>-
+</code></pre></div></p>
 <h2 id="test-run-command-line">Test run (command line)<a class="headerlink" href="#test-run-command-line" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><span class="c1"># Load the proper environment (if not already done)</span>
-<span class="nb">source</span> setup_sl6_env.sh
+<div class="highlight"><pre><span></span><code><span class="c1"># Load the proper environment (if not already done)</span>
+<span class="nb">source</span><span class="w"> </span>setup_sl6_env.sh
 <span class="c1"># Create some dumb root files to play with</span>
-<span class="nb">cd</span> <span class="nb">test</span>
-root -l -b -q generate_files.C
+<span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
+root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span>-q<span class="w"> </span>generate_files.C
 <span class="c1"># Now plot stuff</span>
-./../plotIt -o plots/ example.yml
+./../plotIt<span class="w"> </span>-o<span class="w"> </span>plots/<span class="w"> </span>example.yml
 <span class="c1"># Go to the plots directory to observe the beautiful plots</span>
-</pre></div>
+</code></pre></div>
 <h3 id="optional-command-line-arguments">Optional command-line arguments<a class="headerlink" href="#optional-command-line-arguments" title="Permanent link">&para;</a></h3>
 <p>The command above is the minimal way to run plotIt: with a configuration file and output directory.
 There are also a number of optional arguments that change the behaviour:</p>
@@ -766,300 +1015,300 @@ There are also a number of optional arguments that change the behaviour:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Action</th>
-<th align="left">Default</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">width</td>
-<td align="left">number</td>
-<td align="left">Width (in pixels) of the plots</td>
-<td align="left"><code>800</code></td>
+<td style="text-align: left;">width</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Width (in pixels) of the plots</td>
+<td style="text-align: left;"><code>800</code></td>
 </tr>
 <tr>
-<td align="left">height</td>
-<td align="left">number</td>
-<td align="left">Height (in pixels) of the plots</td>
-<td align="left"><code>800</code></td>
+<td style="text-align: left;">height</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Height (in pixels) of the plots</td>
+<td style="text-align: left;"><code>800</code></td>
 </tr>
 <tr>
-<td align="left">experiment</td>
-<td align="left">string</td>
-<td align="left">Name of the experiment, appearing in bold above the plot</td>
-<td align="left"><code>CMS</code></td>
+<td style="text-align: left;">experiment</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Name of the experiment, appearing in bold above the plot</td>
+<td style="text-align: left;"><code>CMS</code></td>
 </tr>
 <tr>
-<td align="left">extra-label</td>
-<td align="left">string</td>
-<td align="left">Additional text above the plot</td>
-<td align="left"></td>
+<td style="text-align: left;">extra-label</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Additional text above the plot</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">root</td>
-<td align="left">string</td>
-<td align="left">Path to the folder where the files are located</td>
-<td align="left"><code>./</code></td>
+<td style="text-align: left;">root</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Path to the folder where the files are located</td>
+<td style="text-align: left;"><code>./</code></td>
 </tr>
 <tr>
-<td align="left">scale</td>
-<td align="left">number</td>
-<td align="left">Global scaling of all non-data entries</td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">scale</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Global scaling of all non-data entries</td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">eras</td>
-<td align="left">list of strings</td>
-<td align="left">List of data-taking periods to combine</td>
-<td align="left"><code>[""]</code></td>
+<td style="text-align: left;">eras</td>
+<td style="text-align: left;">list of strings</td>
+<td style="text-align: left;">List of data-taking periods to combine</td>
+<td style="text-align: left;"><code>[""]</code></td>
 </tr>
 <tr>
-<td align="left"><strong>luminosity</strong></td>
-<td align="left">number or map</td>
-<td align="left">Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label. When using eras: map of <code>{ era : luminosity }</code></td>
-<td align="left"></td>
+<td style="text-align: left;"><strong>luminosity</strong></td>
+<td style="text-align: left;">number or map</td>
+<td style="text-align: left;">Integrated luminosity (in pb) used to normalise MC to data. Used by the luminosity label. When using eras: map of <code>{ era : luminosity }</code></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">luminosity-error</td>
-<td align="left">number</td>
-<td align="left">Fractional uncertainty on the integrated luminosity. Used for the yields table (uncertainty on MC and data/MC ratio) and the plot's MC &amp; ratio syst. error bands.</td>
-<td align="left"><code>0</code></td>
+<td style="text-align: left;">luminosity-error</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Fractional uncertainty on the integrated luminosity. Used for the yields table (uncertainty on MC and data/MC ratio) and the plot's MC &amp; ratio syst. error bands.</td>
+<td style="text-align: left;"><code>0</code></td>
 </tr>
 <tr>
-<td align="left">luminosity-label</td>
-<td align="left">string</td>
-<td align="left">Luminosity label appearing above the plot. In the string, <code>%lumi%</code> gets replaced by the integrated luminosity in fb.</td>
-<td align="left"></td>
+<td style="text-align: left;">luminosity-label</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Luminosity label appearing above the plot. In the string, <code>%lumi%</code> gets replaced by the integrated luminosity in fb.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">error-fill-color</td>
-<td align="left">color</td>
-<td align="left"></td>
-<td align="left"><code>42</code></td>
+<td style="text-align: left;">error-fill-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>42</code></td>
 </tr>
 <tr>
-<td align="left">error-fill-style</td>
-<td align="left">fill style</td>
-<td align="left"></td>
-<td align="left"><code>3154</code></td>
+<td style="text-align: left;">error-fill-style</td>
+<td style="text-align: left;">fill style</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>3154</code></td>
 </tr>
 <tr>
-<td align="left">fit-line-color</td>
-<td align="left">color</td>
-<td align="left"></td>
-<td align="left"><code>46</code></td>
+<td style="text-align: left;">fit-line-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>46</code></td>
 </tr>
 <tr>
-<td align="left">fit-line-style</td>
-<td align="left">line style</td>
-<td align="left"></td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">fit-line-style</td>
+<td style="text-align: left;">line style</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">fit-line-width</td>
-<td align="left">line width</td>
-<td align="left"></td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">fit-line-width</td>
+<td style="text-align: left;">line width</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">fit-error-fill-color</td>
-<td align="left">color</td>
-<td align="left"></td>
-<td align="left"><code>42</code></td>
+<td style="text-align: left;">fit-error-fill-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>42</code></td>
 </tr>
 <tr>
-<td align="left">fit-error-fill-style</td>
-<td align="left">fill style</td>
-<td align="left"></td>
-<td align="left"><code>1001</code></td>
+<td style="text-align: left;">fit-error-fill-style</td>
+<td style="text-align: left;">fill style</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1001</code></td>
 </tr>
 <tr>
-<td align="left">fit-n-points</td>
-<td align="left">number</td>
-<td align="left"></td>
-<td align="left"><code>1000</code></td>
+<td style="text-align: left;">fit-n-points</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1000</code></td>
 </tr>
 <tr>
-<td align="left">ratio-fit-line-color</td>
-<td align="left">color</td>
-<td align="left"></td>
-<td align="left"><code>46</code></td>
+<td style="text-align: left;">ratio-fit-line-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>46</code></td>
 </tr>
 <tr>
-<td align="left">ratio-fit-line-style</td>
-<td align="left">line style</td>
-<td align="left"></td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">ratio-fit-line-style</td>
+<td style="text-align: left;">line style</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">ratio-fit-line-width</td>
-<td align="left">line width</td>
-<td align="left"></td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">ratio-fit-line-width</td>
+<td style="text-align: left;">line width</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">ratio-fit-error-fill-color</td>
-<td align="left">color</td>
-<td align="left"></td>
-<td align="left"><code>42</code></td>
+<td style="text-align: left;">ratio-fit-error-fill-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>42</code></td>
 </tr>
 <tr>
-<td align="left">ratio-fit-error-fill-style</td>
-<td align="left">fill style</td>
-<td align="left"></td>
-<td align="left"><code>1001</code></td>
+<td style="text-align: left;">ratio-fit-error-fill-style</td>
+<td style="text-align: left;">fill style</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1001</code></td>
 </tr>
 <tr>
-<td align="left">ratio-fit-n-points</td>
-<td align="left">number</td>
-<td align="left"></td>
-<td align="left"><code>1000</code></td>
+<td style="text-align: left;">ratio-fit-n-points</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1000</code></td>
 </tr>
 <tr>
-<td align="left">blinded-range-fill-color</td>
-<td align="left">color</td>
-<td align="left"></td>
-<td align="left"><code>42</code></td>
+<td style="text-align: left;">blinded-range-fill-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>42</code></td>
 </tr>
 <tr>
-<td align="left">blinded-range-fill-style</td>
-<td align="left">fill style</td>
-<td align="left"></td>
-<td align="left"><code>1001</code></td>
+<td style="text-align: left;">blinded-range-fill-style</td>
+<td style="text-align: left;">fill style</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>1001</code></td>
 </tr>
 <tr>
-<td align="left">y-axis-format</td>
-<td align="left">formatted string</td>
-<td align="left">Arg. 1: plot's y-axis title; Arg. 2: plot's first bin's width</td>
-<td align="left"><code>%1% / %2$.2f</code></td>
+<td style="text-align: left;">y-axis-format</td>
+<td style="text-align: left;">formatted string</td>
+<td style="text-align: left;">Arg. 1: plot's y-axis title; Arg. 2: plot's first bin's width</td>
+<td style="text-align: left;"><code>%1% / %2$.2f</code></td>
 </tr>
 <tr>
-<td align="left">ratio-y-axis</td>
-<td align="left">string</td>
-<td align="left">Y axis title of the ratio plot</td>
-<td align="left"><code>Data / MC</code></td>
+<td style="text-align: left;">ratio-y-axis</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Y axis title of the ratio plot</td>
+<td style="text-align: left;"><code>Data / MC</code></td>
 </tr>
 <tr>
-<td align="left">ratio-style</td>
-<td align="left">string</td>
-<td align="left">Draw option for the ratio histogram</td>
-<td align="left"><code>P0</code></td>
+<td style="text-align: left;">ratio-style</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Draw option for the ratio histogram</td>
+<td style="text-align: left;"><code>P0</code></td>
 </tr>
 <tr>
-<td align="left">mode</td>
-<td align="left">string</td>
-<td align="left"><code>tree</code> (fill TH1s from a tree on-the-fly) or <code>hist</code> (retrieve TH1s from files)</td>
-<td align="left"><code>hist</code></td>
+<td style="text-align: left;">mode</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"><code>tree</code> (fill TH1s from a tree on-the-fly) or <code>hist</code> (retrieve TH1s from files)</td>
+<td style="text-align: left;"><code>hist</code></td>
 </tr>
 <tr>
-<td align="left">tree-name</td>
-<td align="left">string</td>
-<td align="left">Name of the TTree used to fill the histograms in <code>tree</code> mode</td>
-<td align="left"></td>
+<td style="text-align: left;">tree-name</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Name of the TTree used to fill the histograms in <code>tree</code> mode</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">labels</td>
-<td align="left">Label</td>
-<td align="left">Extra labels' configurations (see below).</td>
-<td align="left"></td>
+<td style="text-align: left;">labels</td>
+<td style="text-align: left;">Label</td>
+<td style="text-align: left;">Extra labels' configurations (see below).</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">show-overflow</td>
-<td align="left">bool</td>
-<td align="left">Show under- and overflow</td>
-<td align="left">false</td>
+<td style="text-align: left;">show-overflow</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Show under- and overflow</td>
+<td style="text-align: left;">false</td>
 </tr>
 <tr>
-<td align="left">errors-type</td>
-<td align="left">string</td>
-<td align="left"><code>normal</code> (ie. sqrt(N)), <code>poisson</code> (68% Poisson interval) or <code>poisson2</code></td>
-<td align="left"><code>poisson</code></td>
+<td style="text-align: left;">errors-type</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"><code>normal</code> (ie. sqrt(N)), <code>poisson</code> (68% Poisson interval) or <code>poisson2</code></td>
+<td style="text-align: left;"><code>poisson</code></td>
 </tr>
 <tr>
-<td align="left">yields-table-stretch</td>
-<td align="left">number</td>
-<td align="left">Stretch of LaTeX table produced</td>
-<td align="left"><code>1.15</code></td>
+<td style="text-align: left;">yields-table-stretch</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Stretch of LaTeX table produced</td>
+<td style="text-align: left;"><code>1.15</code></td>
 </tr>
 <tr>
-<td align="left">yields-table-align</td>
-<td align="left">string</td>
-<td align="left">Alignment of the LaTeX table. For now only <code>h</code> (processes horizontal, categories vertical) is supported.</td>
-<td align="left"><code>h</code></td>
+<td style="text-align: left;">yields-table-align</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Alignment of the LaTeX table. For now only <code>h</code> (processes horizontal, categories vertical) is supported.</td>
+<td style="text-align: left;"><code>h</code></td>
 </tr>
 <tr>
-<td align="left">yields-table-text-align</td>
-<td align="left">string</td>
-<td align="left"><code>l</code>/<code>r</code>/<code>c</code>: alignment of text in the LaTeX table's entries.</td>
-<td align="left"><code>c</code></td>
+<td style="text-align: left;">yields-table-text-align</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;"><code>l</code>/<code>r</code>/<code>c</code>: alignment of text in the LaTeX table's entries.</td>
+<td style="text-align: left;"><code>c</code></td>
 </tr>
 <tr>
-<td align="left">yields-table-numerical-precision-yields</td>
-<td align="left">number</td>
-<td align="left">Number of decimals used for the MC yields in the LaTeX table.</td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">yields-table-numerical-precision-yields</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Number of decimals used for the MC yields in the LaTeX table.</td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">yields-table-numerical-precision-ratio</td>
-<td align="left">number</td>
-<td align="left">Number of decimals used for the data/MC ratio in the LaTeX table.</td>
-<td align="left"><code>2</code></td>
+<td style="text-align: left;">yields-table-numerical-precision-ratio</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Number of decimals used for the data/MC ratio in the LaTeX table.</td>
+<td style="text-align: left;"><code>2</code></td>
 </tr>
 <tr>
-<td align="left">line-color</td>
-<td align="left">color</td>
-<td align="left">Default color of lines</td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">line-color</td>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;">Default color of lines</td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">line-type</td>
-<td align="left">line style</td>
-<td align="left">Default style (type) of lines</td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">line-type</td>
+<td style="text-align: left;">line style</td>
+<td style="text-align: left;">Default style (type) of lines</td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">line-width</td>
-<td align="left">number</td>
-<td align="left">Default width of lines</td>
-<td align="left"><code>1</code></td>
+<td style="text-align: left;">line-width</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Default width of lines</td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr>
-<td align="left">book-keeping-file</td>
-<td align="left">string</td>
-<td align="left">If set, store all the produced plots into this file in addition to create graphic files</td>
-<td align="left">none</td>
+<td style="text-align: left;">book-keeping-file</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">If set, store all the produced plots into this file in addition to create graphic files</td>
+<td style="text-align: left;">none</td>
 </tr>
 <tr>
-<td align="left">x-axis-label-size</td>
-<td align="left">number</td>
-<td align="left">The size of the labels on the x-axis, in pixel</td>
-<td align="left"><code>18</code></td>
+<td style="text-align: left;">x-axis-label-size</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">The size of the labels on the x-axis, in pixel</td>
+<td style="text-align: left;"><code>18</code></td>
 </tr>
 <tr>
-<td align="left">y-axis-label-size</td>
-<td align="left">number</td>
-<td align="left">The size of the labels on the y-axis, in pixel</td>
-<td align="left"><code>18</code></td>
+<td style="text-align: left;">y-axis-label-size</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">The size of the labels on the y-axis, in pixel</td>
+<td style="text-align: left;"><code>18</code></td>
 </tr>
 <tr>
-<td align="left">x-axis-top-ticks</td>
-<td align="left">bool</td>
-<td align="left">Show ticks at the top of the frame</td>
-<td align="left"><code>True</code></td>
+<td style="text-align: left;">x-axis-top-ticks</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Show ticks at the top of the frame</td>
+<td style="text-align: left;"><code>True</code></td>
 </tr>
 <tr>
-<td align="left">y-axis-right-ticks</td>
-<td align="left">bool</td>
-<td align="left">Show ticks at the right of the frame</td>
-<td align="left"><code>True</code></td>
+<td style="text-align: left;">y-axis-right-ticks</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Show ticks at the right of the frame</td>
+<td style="text-align: left;"><code>True</code></td>
 </tr>
 <tr>
-<td align="left">transparent-background</td>
-<td align="left">bool</td>
-<td align="left">Transparent background for canvas and legend</td>
-<td align="left"><code>False</code></td>
+<td style="text-align: left;">transparent-background</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Transparent background for canvas and legend</td>
+<td style="text-align: left;"><code>False</code></td>
 </tr>
 </tbody>
 </table>
@@ -1096,12 +1345,18 @@ There are also a number of optional arguments that change the behaviour:</p>
 <td>y-axis-format</td>
 <td>formatted string</td>
 <td>Overrides plotIt option.</td>
-<td></td>
+<td>%1%</td>
 </tr>
 <tr>
 <td>normalized</td>
 <td>bool</td>
 <td>Normalize data/each signal/total MC to 1.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>normalizedByBinWidth</td>
+<td>bool</td>
+<td>The bin contents and errors are divided by the bin width.</td>
 <td><code>false</code></td>
 </tr>
 <tr>
@@ -1553,81 +1808,81 @@ where <code>&lt;luminosity&gt;</code> is the luminosity for the <code>era</code>
 <h4 id="systematics-configuration-systematics">Systematics configuration ('systematics')<a class="headerlink" href="#systematics-configuration-systematics" title="Permanent link">&para;</a></h4>
 <p>Different types of systematic uncertainties are supported: shape, log-normal and constant.</p>
 <p>Each shape uncertainty requires an up and down variated histogram. They are retrieved using its name, specified in the yml file as:</p>
-<p><div class="highlight"><pre><span></span>systematics:
+<p><div class="highlight"><pre><span></span><code>systematics:
   - &lt;systematic&gt;
-</pre></div>
+</code></pre></div>
 Or, equivalently:
-<div class="highlight"><pre><span></span>systematics:
+<div class="highlight"><pre><span></span><code>systematics:
   - &lt;systematic&gt;:
      type: shape
-</pre></div>
+</code></pre></div>
 Based on this, plotIt will either look for two histograms called <code>&lt;nominal&gt;__&lt;systematic&gt;[up|down]</code>, where <code>&lt;nominal&gt;</code> is the nominal histogram, in the file containing all the nominal histograms, or look for histograms called <code>&lt;nominal&gt;</code> in two files called <code>&lt;nominalFile&gt;__&lt;systematic&gt;[up|down].root</code> (where <code>&lt;nominalFile&gt;</code> is the file containing the nominal histograms for that process).</p>
 <p>A constant systematic is just a rate uncertainty, which can specified either as:
-<div class="highlight"><pre><span></span>systematics:
+<div class="highlight"><pre><span></span><code>systematics:
   - &lt;systematic&gt;: &lt;value&gt;
-</pre></div>
+</code></pre></div>
 or as:
-<div class="highlight"><pre><span></span>systematics:
+<div class="highlight"><pre><span></span><code>systematics:
   - &lt;systematic&gt;:
      type: const
      value: &lt;value&gt;
-</pre></div>
+</code></pre></div>
 where <code>&lt;value&gt;</code> is the value with which the nominal histogram should be scaled up and down (by <code>&lt;value&gt;</code> and <code>2-&lt;value&gt;</code>): e.g. with <code>1.025</code>, the histograms are scaled by <code>1.025</code> and <code>0.975</code>, i.e. by +/- 2.5%.</p>
 <p>Any kind of systematics can be restricted to a subset of files by means of a regular expression:
-<div class="highlight"><pre><span></span>systematics:
+<div class="highlight"><pre><span></span><code>systematics:
   - &lt;systematic&gt;:
      type: shape
      on: &#39;ttbar&#39;
-</pre></div>
+</code></pre></div>
 will only apply the <code>&lt;systematic&gt;</code> on files containing <code>ttbar</code>.</p>
 <p>When plotting, all uncertainties will be added in quadrature, assuming zero correlations between all of them.</p>
 <h4 id="additional-labels-labels">Additional labels ('labels')<a class="headerlink" href="#additional-labels-labels" title="Permanent link">&para;</a></h4>
 <p>Each plot can be assigned a set of labels. A label is a custom string which can be positioned anywhere on the canvas. You can defined labels as follow:</p>
-<p><div class="highlight"><pre><span></span>labels:
+<p><div class="highlight"><pre><span></span><code>labels:
   - {&lt;label1&gt;}
   - {&lt;label2&gt;}
-</pre></div>
+</code></pre></div>
 Each label has the following fields:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Field</th>
-<th align="left">Type</th>
-<th align="left">Action</th>
-<th align="left">Default</th>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><strong>text</strong></td>
-<td align="left">string</td>
-<td align="left">Text of the label. Support <code>TLatex</code> syntax (<code>#splitline{}{}</code> is especially useful for multi-line labels)</td>
-<td align="left"></td>
+<td style="text-align: left;"><strong>text</strong></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Text of the label. Support <code>TLatex</code> syntax (<code>#splitline{}{}</code> is especially useful for multi-line labels)</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left"><strong>position</strong></td>
-<td align="left">Point</td>
-<td align="left">Position of the label on the canvas</td>
-<td align="left"></td>
+<td style="text-align: left;"><strong>position</strong></td>
+<td style="text-align: left;">Point</td>
+<td style="text-align: left;">Position of the label on the canvas</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td align="left">size</td>
-<td align="left">number</td>
-<td align="left">Font size of the label (in pixel)</td>
-<td align="left"><code>18</code></td>
+<td style="text-align: left;">size</td>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Font size of the label (in pixel)</td>
+<td style="text-align: left;"><code>18</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span>plots:
+<div class="highlight"><pre><span></span><code>plots:
   &#39;Plot&#39;:
     x-axis: &quot;X axis&quot;
     y-axis: &quot;Y axis&quot;
     labels:
       - {text: &#39;Label&#39;, position: [0.7, 0.7]}
       - {text: &#39;Label 2&#39;, position: [0.3, 0.7]}
-</pre></div>
+</code></pre></div>
 </div>
 <h4 id="lines">Lines<a class="headerlink" href="#lines" title="Permanent link">&para;</a></h4>
 <p>You can draw lines over a plot using the <code>vertical-lines</code>, <code>horizontal-lines</code> and <code>lines</code> plot options. Each option accepts an <code>array</code> of <code>line</code>. A <code>line</code> is defined:</p>
@@ -1647,39 +1902,39 @@ Each label has the following fields:</p>
 <p>If you want a specific line to be drawn on the ratio instead of the main plot, you can set the <code>pad</code> option to <code>bottom</code> (it defaults to <code>top</code>).</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><span class="nt">plots</span><span class="p">:</span>
-  <span class="nt">&#39;histo1&#39;</span><span class="p">:</span>
-    <span class="c1"># Draw two vertical lines at x = 3 and x = 7. The first line is stylized individually and drawn on the ratio</span>
-    <span class="nt">vertical-lines</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span>
-<span class="nt">          line-color</span><span class="p">:</span> <span class="nv">10</span><span class="p p-Indicator">,</span>
-<span class="nt">          line-type</span><span class="p">:</span> <span class="nv">4</span><span class="p p-Indicator">,</span>
-<span class="nt">          pad</span><span class="p">:</span> <span class="nv">bottom</span><span class="p p-Indicator">,</span>
-<span class="nt">          value</span><span class="p">:</span> <span class="nv">3</span>
-        <span class="p p-Indicator">}</span><span class="err">,</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
-    <span class="c1"># Draw one horizontal line at y = 80</span>
-    <span class="nt">horizontal-lines</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-    <span class="c1"># Draw:</span>
-    <span class="c1"># 1 line from (3, 20) -&gt; (8, 90)</span>
-    <span class="c1"># 1 vertical line at x = 5 (.nan is replaced automatically by the minimum and maximum of the y-axis)</span>
-    <span class="nt">lines</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="p p-Indicator">[[</span><span class="nv">3</span><span class="p p-Indicator">,</span> <span class="nv">20</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">8</span><span class="p p-Indicator">,</span> <span class="nv">90</span><span class="p p-Indicator">]]</span>
-      <span class="p p-Indicator">-</span> <span class="p p-Indicator">[[</span><span class="nv">5</span><span class="p p-Indicator">,</span> <span class="nv">.nan</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">5</span><span class="p p-Indicator">,</span> <span class="nv">.nan</span><span class="p p-Indicator">]]</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">plots</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;histo1&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="c1"># Draw two vertical lines at x = 3 and x = 7. The first line is stylized individually and drawn on the ratio</span>
+<span class="w">    </span><span class="nt">vertical-lines</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">          line-color</span><span class="p">:</span><span class="w"> </span><span class="nv">10</span><span class="p p-Indicator">,</span>
+<span class="nt">          line-type</span><span class="p">:</span><span class="w"> </span><span class="nv">4</span><span class="p p-Indicator">,</span>
+<span class="nt">          pad</span><span class="p">:</span><span class="w"> </span><span class="nv">bottom</span><span class="p p-Indicator">,</span>
+<span class="nt">          value</span><span class="p">:</span><span class="w"> </span><span class="nv">3</span>
+<span class="w">        </span><span class="p p-Indicator">}</span><span class="err">,</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="c1"># Draw one horizontal line at y = 80</span>
+<span class="w">    </span><span class="nt">horizontal-lines</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">    </span><span class="c1"># Draw:</span>
+<span class="w">    </span><span class="c1"># 1 line from (3, 20) -&gt; (8, 90)</span>
+<span class="w">    </span><span class="c1"># 1 vertical line at x = 5 (.nan is replaced automatically by the minimum and maximum of the y-axis)</span>
+<span class="w">    </span><span class="nt">lines</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">3</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">20</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">90</span><span class="p p-Indicator">]]</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.nan</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">.nan</span><span class="p p-Indicator">]]</span>
+</code></pre></div>
 </div>
 <h4 id="renaming-operations">Renaming operations<a class="headerlink" href="#renaming-operations" title="Permanent link">&para;</a></h4>
 <p>A renaming operation is defined in YAML as a dictionary with the keys <code>from</code> and <code>to</code>. <code>from</code> is a regular expression following the <a href="https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions">extended POSIX syntax</a>. Any string matching this regular expression will be replaced by <code>to</code>. Matching groups are supported and can be accessed using the <code>\N</code> syntax, where <code>N</code> is the index of the matching group.</p>
 <p>The <code>rename</code> option expect a <strong>list</strong> of operation. Renaming operations are applied in sequence, starting from the first occurrence.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
-    <span class="nt">&#39;file.root&#39;</span><span class="p">:</span>
-        <span class="nt">rename</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="nt">from</span><span class="p">:</span> <span class="s">&#39;([[:alpha:]+)_cut$&#39;</span>
-              <span class="nt">to</span><span class="p">:</span> <span class="s">&#39;\1_nocut&#39;</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">files</span><span class="p">:</span>
+<span class="w">    </span><span class="s">&#39;file.root&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">        </span><span class="nt">rename</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;([[:alpha:]+)_cut$&#39;</span>
+<span class="w">              </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;\1_nocut&#39;</span>
+</code></pre></div>
 </div>
 <h3 id="parameters-cheatsheets">Parameters cheatsheets<a class="headerlink" href="#parameters-cheatsheets" title="Permanent link">&para;</a></h3>
 <h4 id="line-styles">Line styles<a class="headerlink" href="#line-styles" title="Permanent link">&para;</a></h4>
@@ -1696,72 +1951,101 @@ Each label has the following fields:</p>
 <p><img alt="basic colors from ROOT" src="https://root.cern.ch/doc/master/pict1_TColor_001.png" /></p>
 <p><img alt="Full TColor wheel" src="https://root.cern.ch/doc/master/pict1_TColor_002.png" /></p>
 <p><img alt="hexadecimal (alpha)RGB overview" src="http://www.lug.or.kr/files/cheat_sheet/rgb-hex-cheat-sheet-v1.png" /></p>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
       
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        <a href="../gridin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GridIn" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
+          
+          <a href="../gridin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GridIn">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
-              GridIn
+              <div class="md-ellipsis">
+                GridIn
+              </div>
             </div>
-          </div>
-        </a>
-      
-      
-    </nav>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain
-          </div>
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
           </a>
         
         
-      </div>
+          
+          <a href="../bamboo/" class="md-footer__link md-footer__link--next" aria-label="Next: Bamboo">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Bamboo
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2018 IRMP/CP3, Université catholique de Louvain
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
+        <div class="md-social">
+  
+    
+    
+    
     
       
       
-        
-        
-      
-      <a href="https://github.com/cp3-llbb" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://github.com/cp3-llbb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1770,10 +2054,12 @@ Each label has the following fields:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.471ce7a9.min.js"></script>
       
     
   </body>

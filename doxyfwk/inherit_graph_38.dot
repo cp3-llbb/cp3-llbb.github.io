@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Catch::Internal::Operator\lTraits\< IsGreaterThanOrEqualTo \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1Internal_1_1OperatorTraits_3_01IsGreaterThanOrEqualTo_01_4.html",tooltip=" "];
+  Node0 [label="Catch::Internal::Operator\lTraits\< IsEqualTo \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1Internal_1_1OperatorTraits_3_01IsEqualTo_01_4.html",tooltip=" "];
 }

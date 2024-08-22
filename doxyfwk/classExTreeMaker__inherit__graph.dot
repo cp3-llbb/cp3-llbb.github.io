@@ -5,7 +5,7 @@ digraph "ExTreeMaker"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="ExTreeMaker",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="EDProducer",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [label="edm::EDProducer",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="ProducerGetter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProducerGetter.html",tooltip=" "];
   Node4 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];

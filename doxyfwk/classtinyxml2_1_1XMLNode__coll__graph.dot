@@ -9,5 +9,5 @@ digraph "tinyxml2::XMLNode"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _value" ,fontname="Helvetica"];
   Node3 [label="tinyxml2::StrPair",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtinyxml2_1_1StrPair.html",tooltip=" "];
-  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _lastChild\n_prev\n_parent\n_next\n_firstChild" ,fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _firstChild\n_lastChild\n_next\n_parent\n_prev" ,fontname="Helvetica"];
 }

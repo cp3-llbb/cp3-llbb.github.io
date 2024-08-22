@@ -6,4 +6,12 @@ digraph "CandidatesProducer&lt; ObjectType &gt;"
   Node1 [label="CandidatesProducer\l\< ObjectType \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Framework::Producer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFramework_1_1Producer.html",tooltip="Base class for Framework producers."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LeptonsProducer\< pat\l::Muon \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLeptonsProducer.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MuonsProducer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMuonsProducer.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="LeptonsProducer\< pat\l::Electron \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLeptonsProducer.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ElectronsProducer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classElectronsProducer.html",tooltip=" "];
 }

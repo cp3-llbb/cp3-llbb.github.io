@@ -7,7 +7,7 @@ digraph "Catch::Matchers::Impl::StdString::Equals"
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Catch::Matchers::Impl\l::MatcherImpl\< Equals,\l std::string \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1Matchers_1_1Impl_1_1MatcherImpl.html",tooltip=" "];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Catch::Matchers::Impl\l::Matcher\< std::string \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1Matchers_1_1Impl_1_1Matcher.html",tooltip=" "];
+  Node3 [label="Catch::Matchers::Impl\l::Matcher\< ExpressionT \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1Matchers_1_1Impl_1_1Matcher.html",tooltip=" "];
   Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="Catch::SharedImpl\<\l IShared \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCatch_1_1SharedImpl.html",tooltip=" "];
   Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
